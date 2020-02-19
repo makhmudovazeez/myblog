@@ -19,7 +19,7 @@ class m200219_184928_create_course_info_table extends Migration
             'message' => $this->string(2048)->notNull(),
             'course_id' => $this->integer()->notNull(),
         ]);
-        $this->addForeignKey('course_info-course', 'course_info', 'course_id', 'course', 'id', 'cascade', 'cascade');
+        $this->addForeignKey('course-course_info', 'course_info', 'course_id', 'course', 'id', 'cascade', 'cascade');
     }
 
     /**

@@ -17,7 +17,7 @@ class m200219_184912_create_course_table extends Migration
             'title' => $this->string()->notNull(),
             'category_id' => $this->integer()->notNull(),
         ]);
-        $this->addForeignKey('course-category', 'course', 'category_id', 'category', 'id', 'cascade', 'cascade');
+        $this->addForeignKey('category-course', 'course', 'category_id', 'category', 'id', 'cascade', 'cascade');
 
     }
 

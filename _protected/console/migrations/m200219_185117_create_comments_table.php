@@ -18,7 +18,7 @@ class m200219_185117_create_comments_table extends Migration
             'name' => $this->string()->defaultValue("unnamed"),
             'message' => $this->string()->notNull(),
         ]);
-        $this->addForeignKey('comments-user_profile', 'comments', 'user_profile_id', 'user_profile', 'id', 'no action', 'cascade');
+        $this->addForeignKey('user_profile-comments', 'comments', 'user_profile_id', 'user_profile', 'id', 'no action', 'cascade');
     }
 
     /**

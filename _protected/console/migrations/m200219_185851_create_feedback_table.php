@@ -19,8 +19,8 @@ class m200219_185851_create_feedback_table extends Migration
             'message' => $this->string(1024)->notNull(),
             'course_id' => $this->integer(),
         ]);
-        $this->addForeignKey('feedback-course', 'feedback', 'course_id', 'course', 'id', 'no action', 'cascade');
-        $this->addForeignKey('feedback-user_profile', 'feedback', 'user_profile_id', 'user_profile', 'id', 'no action', 'cascade');
+        $this->addForeignKey('course-feedback', 'feedback', 'course_id', 'course', 'id', 'no action', 'cascade');
+        $this->addForeignKey('user_profile-feedback', 'feedback', 'user_profile_id', 'user_profile', 'id', 'no action', 'cascade');
     }
 
     /**
