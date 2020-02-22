@@ -26,8 +26,7 @@ class m180107_022149_create_user_profile_table extends Migration
             'phone' => $this->string(255),
             'address' => $this->string(),
             'description' => $this->string(),
-            'user_id' => $this->integer()->notNull(),
-            'image' => $this->string(),
+            'user_id' => $this->integer()->notNull()
         ], $tableOptions);
 
         $this->addForeignKey('user-user_profile', 'user_profile', 'user_id', 'user', 'id', 'CASCADE', "CASCADE");

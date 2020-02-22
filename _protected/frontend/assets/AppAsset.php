@@ -28,20 +28,27 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@themes';
     
     public $css = [
-        "css/noscript.css",
-        "css/main.css",
+        'css/site.css',
+        'libs/css/bootstrap.min.css',
+        'libs/css/bootstrap-grid.min.css',
+        'libs/css/bootstrap-reboot.min.css',
+        'libs/css/font-awesome.min.css',
+        'libs/css/tether.min.css',
+        'libs/css/lightbox.min.css',
+        'css/style.css',
+        'css/responsive.css',
+        'css/settings.css'
     ];
     public $js = [
-        "js/jquery.min.js",
-        "js/jquery.scrollex.min.js",
-        "js/jquery.scrolly.min.js",
-        "js/browser.min.js",
-        "js/breakpoints.min.js",
-        "js/util.js",
-        "js/main.js",
+        'libs/js/tether.min.js',
+        'libs/js/jquery.smoothwheel.js',
+        'libs/js/bootstrap.min.js',
+        'libs/js/lightbox.min.js',
+        'js/script.js'
     ];
     
     public $depends = [
         'yii\web\YiiAsset',
     ];
 }
+

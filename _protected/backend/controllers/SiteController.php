@@ -75,7 +75,6 @@ class SiteController extends BackendController
         return $this->render('index');
     }
 
-
     /**
      * Logs in the user if his account is activated,
      * if not, displays standard error message.

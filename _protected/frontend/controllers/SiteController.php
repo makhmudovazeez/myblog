@@ -86,17 +86,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
-    }
-        
-    public function actionGeneric()
-    {
-        return $this->render('generic');
-    }
 
-    public function actionElements()
-    {
-        return $this->render('elements');
+        return $this->render('index');
     }
 
     /**
@@ -104,6 +95,10 @@ class SiteController extends Controller
      *
      * @return string
      */
+    public function actionAbout()
+    {
+        return $this->render('about');
+    }
 
     /**
      * Displays the contact static page and sends the contact email.
