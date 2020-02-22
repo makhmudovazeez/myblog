@@ -89,6 +89,16 @@ class SiteController extends Controller
 
         return $this->render('index');
     }
+    public function actionElements()
+    {
+
+        return $this->render('elements');
+    }
+    public function actionGeneric()
+    {
+
+        return $this->render('generic');
+    }
 
     /**
      * Displays the about static page.

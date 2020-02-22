@@ -15,7 +15,7 @@ class m200222_064523_create_category_table extends Migration
         $this->createTable('category', [
             'id' => $this->primaryKey(),
             'type' => $this->string()->notNull(),
-            'created_at' => $this->date()->defaultValue('CURRENT_TIMESTAMP'), 
+            'created_at' => $this->timestamp(), 
         ]);
     }
 

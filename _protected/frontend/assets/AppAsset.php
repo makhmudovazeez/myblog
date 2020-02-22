@@ -28,23 +28,21 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@themes';
     
     public $css = [
-        'css/site.css',
-        'libs/css/bootstrap.min.css',
-        'libs/css/bootstrap-grid.min.css',
-        'libs/css/bootstrap-reboot.min.css',
-        'libs/css/font-awesome.min.css',
-        'libs/css/tether.min.css',
-        'libs/css/lightbox.min.css',
-        'css/style.css',
-        'css/responsive.css',
-        'css/settings.css'
+        "css/main.css",
+        "css/noscript.css",
+        "css/register.css",
+        "css/fonts.css",
     ];
     public $js = [
-        'libs/js/tether.min.js',
-        'libs/js/jquery.smoothwheel.js',
-        'libs/js/bootstrap.min.js',
-        'libs/js/lightbox.min.js',
-        'js/script.js'
+        "js/jquery.min.js",
+        "js/jquery.js",
+        "js/jquery.scrollex.min.js",
+        "js/jquery.scrolly.min.js",
+        "js/browser.min.js",
+        "js/breakpoints.min.js",
+        "js/util.js",
+        "js/main.js",
+        "js/global.js",
     ];
     
     public $depends = [

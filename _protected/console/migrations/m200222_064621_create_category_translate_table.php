@@ -14,7 +14,7 @@ class m200222_064621_create_category_translate_table extends Migration
     {
         $this->createTable('category_translate', [
             'id' => $this->primaryKey(),
-            'type' => $this->string()-notNull(),
+            'type' => $this->string()->notNull(),
             'category_id' => $this->integer()->notNull(),
             'lang_id' => $this->integer()->notNull(),
         ]);
