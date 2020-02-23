@@ -89,15 +89,23 @@ class SiteController extends Controller
 
         return $this->render('index');
     }
-    public function actionElements()
+
+    public function actionGallery()
     {
 
-        return $this->render('elements');
+        return $this->render('gallery');
     }
-    public function actionGeneric()
+
+    public function actionCourses()
     {
 
-        return $this->render('generic');
+        return $this->render('courses');
+    }
+
+    public function actionCourseCategory()
+    {
+
+        return $this->render('course-category');
     }
 
     /**

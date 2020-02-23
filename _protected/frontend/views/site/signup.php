@@ -7,15 +7,32 @@ use yii\bootstrap\ActiveForm;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\SignupForm */
 
-$this->title = Yii::t('app', 'Signup');
+$this->title = Yii::t('app', 'Registration');
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
-<div class="bg-gray pb-5">
+
+<!-- start banner Area -->
+<section class="banner-area relative about-banner" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    REGISTRATION
+                </h1>
+                <p class="text-white link-nav"><a href="index.html">login </a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+
+<div class="bg-gray pb-4">
     <div class="container">
         <div class="fixer"></div>
-        <div class="login-content mt-5 mb-0">
+        <div class="login-content mt-0 mb-0">
             <h2 class="text-header mt-0 mb-3 text-center">Регистрация</h2>
             <?php $form =  \yii\bootstrap\ActiveForm::begin([
                 'action' => toRoute('/site/signup'),
@@ -94,7 +111,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             </div>
 
-            <span class="w-100 text-center text-description">Do you have an account? <a class="text-danger" href="<?=toRoute('/site/login')?>">Log in</a></span>
+            <span class="w-100 text-center text-description">Do you have an account? <a class="text-danger"
+                    href="<?=toRoute('/site/login')?>">Log in</a></span>
         </div>
     </div>
 </div>

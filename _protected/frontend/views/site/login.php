@@ -6,9 +6,24 @@ use yii\bootstrap\ActiveForm;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \common\models\LoginForm */
 
-$this->title = Yii::t('app', 'Kirish');
+$this->title = Yii::t('app', 'login');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<!-- start banner Area -->
+<section class="banner-area relative about-banner" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    <?=$this->title?>
+                </h1>
+                <p class="text-white link-nav"><a href="index.html">login </a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
 <div class="bg-gray">
     <div class="fixer"></div>
     <div class="container pb-5">
