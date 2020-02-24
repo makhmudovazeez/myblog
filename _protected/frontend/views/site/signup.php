@@ -2,6 +2,7 @@
 use nenad\passwordStrength\PasswordInput;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
@@ -22,7 +23,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h1 class="text-white">
                     REGISTRATION
                 </h1>
-                <p class="text-white link-nav"><a href="index.html">login </a></p>
             </div>
         </div>
     </div>
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container">
         <div class="fixer"></div>
         <div class="login-content mt-0 mb-0">
-            <h2 class="text-header mt-0 mb-3 text-center">Регистрация</h2>
+            <h2 class="text-header mt-0 mb-3 text-center">REGISTRATION</h2>
             <?php $form =  \yii\bootstrap\ActiveForm::begin([
                 'action' => toRoute('/site/signup'),
                 'method' => 'POST',
@@ -91,7 +91,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ])->input('checkbox', [
                 'class' => 'custom-control-input'
             ])->label(false)?>
-
+            <span class="w-100 text-center text-description">Do you have an account? <a class="text-danger"
+                    href="<?=toRoute('/site/login')?>">Log in</a></span>
             <?=\yii\helpers\Html::submitButton('SIGN UP');?>
 
             <?php \yii\bootstrap\ActiveForm::end();?>
@@ -111,8 +112,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
             </div>
 
-            <span class="w-100 text-center text-description">Do you have an account? <a class="text-danger"
-                    href="<?=toRoute('/site/login')?>">Log in</a></span>
         </div>
     </div>
 </div>

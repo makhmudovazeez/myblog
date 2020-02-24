@@ -6,7 +6,7 @@ use yii\bootstrap\ActiveForm;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \common\models\LoginForm */
 
-$this->title = Yii::t('app', 'login');
+$this->title = Yii::t('app', 'Login');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <!-- start banner Area -->
@@ -16,9 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    <?=$this->title?>
+                    LOGIN
                 </h1>
-                <p class="text-white link-nav"><a href="index.html">login </a></p>
             </div>
         </div>
     </div>
@@ -28,18 +27,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="fixer"></div>
     <div class="container pb-5">
         <div class="login-content mt-5 mb-0">
-            <h2 class="text-header mt-0 mb-3 text-center">Kirish</h2>
+            <h2 class="text-header mt-0 mb-3 text-center">LOGIN</h2>
+
             <?php $form =  \yii\bootstrap\ActiveForm::begin([
                 'action' => toRoute('/site/login'),
                 'method' => 'POST'
             ])?>
 
             <?= $form->field($model, 'username')->input('text', [
-                'placeholder' => 'Login yoki email *'
+                'placeholder' => 'Username or email *'
             ])->label(false)?>
 
             <?= $form->field($model, 'password')->input('password', [
-                'placeholder' => 'Parol *'
+                'placeholder' => 'Password *'
             ])->label(false)?>
 
             <?= $form->field($model, 'rememberMe', [
@@ -47,35 +47,35 @@ $this->params['breadcrumbs'][] = $this->title;
                         <label class="custom-control custom-radio">
                           {input}
                           <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">Meni yodda saqla</span>
+                          <span class="custom-control-description">Remember me</span>
                         </label>
-                        <a class="pull-right text-danger" href="'.toRoute('/site/requestpasswordreset').'">Parolni unutdingizmi ?</a>
+                        <a class="pull-right text-danger" href="'.toRoute('/site/requestpasswordreset').'">Forget password?</a>
                     '
             ])->input('checkbox', [
                 'placeholder' => 'Password *',
                 'class' => 'custom-control-input'
             ])->label(false)?>
+            <div class="w-100 text-center text-description">Don`t have an account? <a class="text-danger" href="<?=toRoute('/site/signup')?>">Registration</a></div>
 
             <?=\yii\helpers\Html::submitButton('LOGIN');?>
 
             <?php \yii\bootstrap\ActiveForm::end();?>
 
             <div class="w-100 login-inner text-center pt-4">
-                <span>Yoki</span>
+                <span>OR</span>
 
                 <a href="#" class="btn btn-facebook w-100">
                     <i class="fa fa-facebook"></i>
-                    Facebook bilan kirish
+                    Login with Facebook
                 </a>
 
                 <a href="#" class="btn btn-google w-100">
                     <i class="fa fa-google"></i>
-                    Google bilan kirish
+                    Login with Google
                 </a>
 
             </div>
 
-            <div class="w-100 text-center text-description">Profilingiz yo'qmi? <a class="text-danger" href="<?=toRoute('/site/signup')?>">Ro'yhatdan o'tish</a></div>
         </div>
     </div>
 </div>
