@@ -10,7 +10,6 @@ use Yii;
  * @property integer $id
  * @property integer $news_id
  * @property string $image
- * @property string $information
  *
  * @property News $news
  * @property NewsInformationTranslate[] $newsInformationTranslates
@@ -31,9 +30,9 @@ class NewsInformation extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['news_id', 'information'], 'required'],
+            [['news_id'], 'required'],
             [['news_id'], 'integer'],
-            [['image', 'information'], 'string', 'max' => 255],
+            [['image'], 'string', 'max' => 255],
             [['news_id'], 'exist', 'skipOnError' => true, 'targetClass' => News::className(), 'targetAttribute' => ['news_id' => 'id']],
         ];
     }
@@ -47,7 +46,6 @@ class NewsInformation extends \yii\db\ActiveRecord
             'id' => 'ID',
             'news_id' => 'News ID',
             'image' => 'Image',
-            'information' => 'Information',
         ];
     }
 

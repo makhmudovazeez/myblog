@@ -8,7 +8,6 @@ use Yii;
  * This is the model class for table "category".
  *
  * @property integer $id
- * @property string $type
  * @property string $created_at
  *
  * @property CategoryTranslate[] $categoryTranslates
@@ -31,9 +30,7 @@ class Category extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type'], 'required'],
             [['created_at'], 'safe'],
-            [['type'], 'string', 'max' => 255],
         ];
     }
 
@@ -44,7 +41,6 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'type' => 'Type',
             'created_at' => 'Created At',
         ];
     }
@@ -65,11 +61,15 @@ class Category extends \yii\db\ActiveRecord
         return $this->hasMany(Course::className(), ['category_id' => 'id']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCourseTranslates()
-    {
-        return $this->hasMany(CourseTranslate::className(), ['course_id' => 'id']);
+
+    public function getLanguage(){
+        return Lang::findOne(['url' => Yii::$app->language])->id;
     }
+
+    public function getTitle()
+    {
+     
+        return CategoryTranslate::findOne(['category_id' => $this->id, 'lang_id' => $this->language]) ? CategoryTranslate::findOne(['category_id' => $this->id, 'lang_id' => $this->language])->type : "";
+    }
+
 }

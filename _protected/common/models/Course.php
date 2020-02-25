@@ -8,7 +8,6 @@ use Yii;
  * This is the model class for table "course".
  *
  * @property integer $id
- * @property string $title
  * @property integer $category_id
  *
  * @property Category $category
@@ -30,9 +29,8 @@ class Course extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'category_id'], 'required'],
+            [['category_id'], 'required'],
             [['category_id'], 'integer'],
-            [['title'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
         ];
     }
@@ -44,7 +42,6 @@ class Course extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
             'category_id' => 'Category ID',
         ];
     }
@@ -63,5 +60,15 @@ class Course extends \yii\db\ActiveRecord
     public function getCourseInformations()
     {
         return $this->hasMany(CourseInformation::className(), ['course_id' => 'id']);
+    }
+
+    public function getLanguage(){
+        return Lang::findOne(['url' => Yii::$app->language])->id;
+    }
+
+    public function getTitle()
+    {
+     
+        return CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language]) ? CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language])->title : "";
     }
 }

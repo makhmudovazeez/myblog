@@ -9,7 +9,6 @@ use Yii;
  *
  * @property integer $id
  * @property string $image
- * @property string $informaton
  * @property integer $course_id
  *
  * @property CourseInfoTranslate[] $courseInfoTranslates
@@ -34,7 +33,6 @@ class CourseInformation extends \yii\db\ActiveRecord
             [['course_id'], 'required'],
             [['course_id'], 'integer'],
             [['image'], 'string', 'max' => 255],
-            [['informaton'], 'string', 'max' => 1024],
             [['course_id'], 'exist', 'skipOnError' => true, 'targetClass' => Course::className(), 'targetAttribute' => ['course_id' => 'id']],
         ];
     }
@@ -47,7 +45,6 @@ class CourseInformation extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'image' => 'Image',
-            'informaton' => 'Informaton',
             'course_id' => 'Course ID',
         ];
     }

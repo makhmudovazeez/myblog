@@ -42,26 +42,26 @@ $course = Course::find()->all();
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="<?=Url::to(['index'])?>">home</a></li>
-                    <li><a href="<?=Url::to(['about'])?>">about</a></li>
-                    <li><a href="<?=Url::to(['gallery'])?>">gallery</a></li>
-                    <li class="menu-has-children"><a href="<?=Url::to(['course-category'])?>">courses</a>
+                    <li><a href="<?=Url::to(['index'])?>">HOME</a></li>
+                    <li><a href="<?=Url::to(['about'])?>">ABOUT</a></li>
+                    <li><a href="<?=Url::to(['gallery'])?>">GALLERY</a></li>
+                    <li class="menu-has-children"><a href="<?=Url::to(['courses', 'id' => "all", 'type' => 'all'])?>">COURSES</a>
                         <ul>
                         <?php foreach($category as $ct): ?>
-                            <li class="menu-has-children"><a href="<?=Url::to(['course-category'])?>"><?=$ct->type?></a>
+                            <li class="menu-has-children"><a href="<?=Url::to(['courses', 'id' => $ct->id, 'type' => "category"])?>"><?=$ct->title?></a>
                                 <ul>
                                 <?php foreach($course as $courses): ?>
                                     <?php if($courses->category_id == $ct->id): ?>
-                                    <li><a href="<?=Url::to(['courses'])?>"><?=$courses->title?></a></li>
+                                    <li><a href="<?=Url::to(['courses', 'id' => $courses->id, 'type' => 'courses'])?>"><?=$courses->title?></a></li>
                                     <?php endif; endforeach; ?>
                                 </ul>
                             </li>
                             <?php endforeach; ?>
                         </ul>
                     </li>
-                    <li><a href="<?=Url::to(['contact'])?>">contact</a></li>
+                    <li><a href="<?=Url::to(['contact'])?>">CONTACt</a></li>
                     <?php if(Yii::$app->user->isGuest): ?>
-                    <li><a href="<?=Url::to(['login'])?>">login</a></li>
+                    <li><a href="<?=Url::to(['login'])?>">LOGIN</a></li>
                     <?php else: ?>
                     <li><a href="<?=Url::to(['logout'])?>" data-method="post">logout</a></li>
                     <?php endif; ?>

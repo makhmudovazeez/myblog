@@ -8,7 +8,6 @@ use Yii;
  * This is the model class for table "news".
  *
  * @property integer $id
- * @property string $title
  * @property string $image
  * @property string $message
  *
@@ -31,8 +30,8 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'image', 'message'], 'required'],
-            [['title', 'image', 'message'], 'string', 'max' => 255],
+            [['image', 'message'], 'required'],
+            [['image', 'message'], 'string', 'max' => 255],
         ];
     }
 
@@ -43,7 +42,6 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
             'image' => 'Image',
             'message' => 'Message',
         ];

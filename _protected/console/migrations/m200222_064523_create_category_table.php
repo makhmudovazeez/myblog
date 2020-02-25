@@ -14,7 +14,6 @@ class m200222_064523_create_category_table extends Migration
     {
         $this->createTable('category', [
             'id' => $this->primaryKey(),
-            'type' => $this->string()->notNull(),
             'created_at' => $this->timestamp(), 
         ]);
     }

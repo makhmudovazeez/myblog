@@ -15,7 +15,6 @@ class m200222_064551_create_course_information_table extends Migration
         $this->createTable('course_information', [
             'id' => $this->primaryKey(),
             'image' => $this->string(),
-            'informaton' => $this->string(1024),
             'course_id' => $this->integer()->notNull(),
         ]);
         $this->addForeignKey('course-course_information', 'course_information', 'course_id', 'course', 'id', 'CASCADE', "CASCADE");

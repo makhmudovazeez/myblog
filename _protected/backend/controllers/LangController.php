@@ -14,21 +14,7 @@ use yii\filters\VerbFilter;
  */
 class LangController extends BackendController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return array_merge(parent::behaviors(), [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ]);
-    }
-
+ 
     /**
      * Lists all Lang models.
      * @return mixed

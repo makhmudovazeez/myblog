@@ -96,17 +96,29 @@ class SiteController extends Controller
         return $this->render('gallery');
     }
 
-    public function actionCourses()
+    public function actionCourses($id, $type)
     {
-
-        return $this->render('courses');
+        if($type == 'all' && $id != null){
+            $model = Category::find()->all();
+            return $this->render('courses', [
+                'model' => $model,
+            ]);
+        }
+        if($type == 'courses' && $id != null){
+            $model = Courses::find()->where(['category_id' => $id]);
+            return $this->render('courses', [
+                'model' => $model,
+            ]);
+        }
+        if($type == 'category' && $id != null){
+            $model = Category::find()->all();
+            return $this->render('courses', [
+                'model' => $model,
+            ]);
+        }
+        
     }
 
-    public function actionCourseCategory()
-    {
-
-        return $this->render('course-category');
-    }
 
     /**
      * Displays the about static page.

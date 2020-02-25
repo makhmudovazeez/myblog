@@ -25,7 +25,7 @@ class BackendController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'controllers' => ['user', 'lang'],
+                        'controllers' => ['user', 'lang', 'news', 'category', 'category_translate', 'comments', 'contact', 'contact_translate', 'contact_translate', 'course', 'course_information', 'course_info_translate', 'feedback', 'gallery', 'news_information', 'news_information_translate', 'news_translate'],
                         'actions' => ['index', 'view', 'create', 'update', 'delete'],
                         'allow' => true,
                         'roles' => ['admin'],

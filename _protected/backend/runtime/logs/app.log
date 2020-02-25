@@ -1,0 +1,2112 @@
+2020-02-25 08:34:01 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: D:\OSPanel\domains\myblog\_protected\backend\views\category\index.php in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\View.php:229
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\OSPanel\\doma...', Array, Object(backend\controllers\CategoryController))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\CategoryController))
+#2 D:\OSPanel\domains\myblog\_protected\backend\controllers\CategoryController.php(43): yii\base\Controller->render('index', Array)
+#3 [internal function]: backend\controllers\CategoryController->actionIndex()
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#9 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#10 {main}
+2020-02-25 08:34:01 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '3f0b3bc559ff6c327f695d949a09464dfb246828a94f9ea2e85fc1443927ec0ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"emIugQ4yDcJ4dsIuzuR99CJJD2HmAHna\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=3f0b3bc559ff6c327f695d949a09464dfb246828a94f9ea2e85fc1443927ec0ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22emIugQ4yDcJ4dsIuzuR99CJJD2HmAHna%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1698'
+    'REDIRECT_URL' => '/backend/category'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/category'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582608841.021
+    'REQUEST_TIME' => 1582608841
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 08:59:25 [127.0.0.1][-][jjnk9rtr1d0mv9behf8pctj621][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/news in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('news', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('site/news', Array)
+#2 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#3 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 08:59:25 [127.0.0.1][-][jjnk9rtr1d0mv9behf8pctj621][info][application] $_COOKIE = [
+    'PHPSESSID' => 'jjnk9rtr1d0mv9behf8pctj621'
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=jjnk9rtr1d0mv9behf8pctj621; _csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1896'
+    'REDIRECT_URL' => '/backend/en/site/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/en/site/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610365.504
+    'REQUEST_TIME' => 1582610365
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:01:04 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:01:03 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => '7jh2sjai38hmg50j2m0t2n8dn5'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/news'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://myblog/backend/en/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=7jh2sjai38hmg50j2m0t2n8dn5; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1910'
+    'REDIRECT_URL' => '/backend/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610463.787
+    'REQUEST_TIME' => 1582610463
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:03:09 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "category_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category_transl...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:03:09 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => '7jh2sjai38hmg50j2m0t2n8dn5'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/news'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=7jh2sjai38hmg50j2m0t2n8dn5; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1918'
+    'REDIRECT_URL' => '/backend/category_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/category_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610589.608
+    'REQUEST_TIME' => 1582610589
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:04:00 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "category_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category_transl...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:04:00 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => '7jh2sjai38hmg50j2m0t2n8dn5'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/news'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=7jh2sjai38hmg50j2m0t2n8dn5; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1920'
+    'REDIRECT_URL' => '/backend/category_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/category_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610640.622
+    'REQUEST_TIME' => 1582610640
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:04:06 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "categorytranslate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('categorytransla...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:04:06 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => '7jh2sjai38hmg50j2m0t2n8dn5'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/news'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=7jh2sjai38hmg50j2m0t2n8dn5; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1928'
+    'REDIRECT_URL' => '/backend/categorytranslate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/categorytranslate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610646.79
+    'REQUEST_TIME' => 1582610646
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:04:26 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "categorytranslate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('categorytransla...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:04:26 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => '7jh2sjai38hmg50j2m0t2n8dn5'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/news'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=7jh2sjai38hmg50j2m0t2n8dn5; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1930'
+    'REDIRECT_URL' => '/backend/categorytranslate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/categorytranslate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610666.574
+    'REQUEST_TIME' => 1582610666
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:04:29 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:04:29 [127.0.0.1][1][7jh2sjai38hmg50j2m0t2n8dn5][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => '7jh2sjai38hmg50j2m0t2n8dn5'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/news'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=7jh2sjai38hmg50j2m0t2n8dn5; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1934'
+    'REDIRECT_URL' => '/backend/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610669.612
+    'REQUEST_TIME' => 1582610669
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:04:56 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:04:56 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1946'
+    'REDIRECT_URL' => '/backend/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610696.852
+    'REQUEST_TIME' => 1582610696
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:05:07 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:05:07 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1948'
+    'REDIRECT_URL' => '/backend/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610707.861
+    'REQUEST_TIME' => 1582610707
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:05:09 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:05:09 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1950'
+    'REDIRECT_URL' => '/backend/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610709.415
+    'REQUEST_TIME' => 1582610709
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:05:10 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:05:10 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1954'
+    'REDIRECT_URL' => '/backend/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610710.388
+    'REQUEST_TIME' => 1582610710
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:05:11 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:05:11 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1958'
+    'REDIRECT_URL' => '/backend/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610711.173
+    'REQUEST_TIME' => 1582610711
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:05:16 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/news in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('news', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('site/news', Array)
+#2 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#3 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:05:16 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1962'
+    'REDIRECT_URL' => '/backend/site/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/site/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610716.02
+    'REQUEST_TIME' => 1582610716
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:05:50 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/news in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('news', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('site/news', Array)
+#2 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#3 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:05:50 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1964'
+    'REDIRECT_URL' => '/backend/site/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/site/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610750.095
+    'REQUEST_TIME' => 1582610750
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:05:55 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:05:55 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_PURPOSE' => 'prefetch'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1968'
+    'REDIRECT_URL' => '/backend/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610755.11
+    'REQUEST_TIME' => 1582610755
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:05:55 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:05:55 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1970'
+    'REDIRECT_URL' => '/backend/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610755.356
+    'REQUEST_TIME' => 1582610755
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:07:08 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "category_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category_transl...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:07:08 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1976'
+    'REDIRECT_URL' => '/backend/category_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/category_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610828.247
+    'REQUEST_TIME' => 1582610828
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:07:20 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: D:\OSPanel\domains\myblog\_protected\backend\views\category-translate\index.php in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\View.php:229
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('D:\\OSPanel\\doma...', Array, Object(backend\controllers\CategoryTranslateController))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\CategoryTranslateController))
+#2 D:\OSPanel\domains\myblog\_protected\backend\controllers\CategoryTranslateController.php(29): yii\base\Controller->render('index', Array)
+#3 [internal function]: backend\controllers\CategoryTranslateController->actionIndex()
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category-transl...', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#9 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#10 {main}
+2020-02-25 09:07:20 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1978'
+    'REDIRECT_URL' => '/backend/category-translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/category-translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610839.991
+    'REQUEST_TIME' => 1582610839
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:07:38 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "category_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category_transl...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:07:38 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1980'
+    'REDIRECT_URL' => '/backend/category_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/category_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610858.136
+    'REQUEST_TIME' => 1582610858
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:07:47 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "categorytranslate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('categorytransla...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:07:47 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1982'
+    'REDIRECT_URL' => '/backend/categorytranslate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/categorytranslate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610867.131
+    'REQUEST_TIME' => 1582610867
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:08:24 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "categorytranslate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('categorytransla...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:08:23 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1985'
+    'REDIRECT_URL' => '/backend/categorytranslate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/categorytranslate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610903.962
+    'REQUEST_TIME' => 1582610903
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:08:27 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "category_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category_transl...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:08:27 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_PURPOSE' => 'prefetch'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1993'
+    'REDIRECT_URL' => '/backend/category_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/category_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610907.837
+    'REQUEST_TIME' => 1582610907
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:08:28 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "category_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('category_transl...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:08:28 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1995'
+    'REDIRECT_URL' => '/backend/category_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/category_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610908.147
+    'REQUEST_TIME' => 1582610908
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:08:43 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "views/category_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('views/category_...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:08:43 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1997'
+    'REDIRECT_URL' => '/backend/views/category_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/views/category_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610923.499
+    'REQUEST_TIME' => 1582610923
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:08:56 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "views/contact". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('views/contact', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:08:56 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '1999'
+    'REDIRECT_URL' => '/backend/views/contact'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/views/contact'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610936.45
+    'REQUEST_TIME' => 1582610936
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:09:26 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "categoryTranslate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('categoryTransla...', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:09:26 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '2003'
+    'REDIRECT_URL' => '/backend/categoryTranslate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/categoryTranslate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582610966.599
+    'REQUEST_TIME' => 1582610966
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:11:40 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "news_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news_translate', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:11:40 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '2014'
+    'REDIRECT_URL' => '/backend/news_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582611100.808
+    'REQUEST_TIME' => 1582611100
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:15:42 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "news_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news_translate', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:15:42 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '2028'
+    'REDIRECT_URL' => '/backend/news_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582611341.98
+    'REQUEST_TIME' => 1582611341
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:15:47 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#8 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news-translate', Array)
+#9 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#10 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#11 {main}
+2020-02-25 09:15:47 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '2030'
+    'REDIRECT_URL' => '/backend/news-translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news-translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582611347.881
+    'REQUEST_TIME' => 1582611347
+    'argv' => []
+    'argc' => 0
+]
+2020-02-25 09:15:56 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "news_translate". in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('news_translate', Array)
+#1 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#2 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 D:\OSPanel\domains\myblog\_protected\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(backend\components\LangRequest))
+#1 D:\OSPanel\domains\myblog\backend\index.php(18): yii\base\Application->run()
+#2 {main}
+2020-02-25 09:15:56 [127.0.0.1][1][b0ug8sbbacik1mtkq0tlbjlq11][info][application] $_COOKIE = [
+    '_csrf' => '332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ\";}'
+    'PHPSESSID' => 'b0ug8sbbacik1mtkq0tlbjlq11'
+    '_identity' => '16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'myblog'
+    'HTTP_X_REAL_IP' => '127.0.0.1'
+    'HTTP_X_FORWARDED_PROTO' => 'http'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=332e2b5884b0a3f995e37d77e3c8e5184e87fd0aaf646524626db1315781c227a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22f-hIjFLWD2iFVmtloafIXKHC3czLG4SJ%22%3B%7D; PHPSESSID=b0ug8sbbacik1mtkq0tlbjlq11; _identity=16de63b4602c54ba24d4a6cf24ac77132ea581ef56c8a3642e9152de6f84a86da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22f6bXj7h6HUE6RRhAcwK_7mSS66TZPUo5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'd:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;d:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;d:\\ospanel\\modules\\php\\PHP-7.0-x64;d:\\ospanel\\modules\\imagemagick;d:\\ospanel\\modules\\wget\\bin;d:\\ospanel\\modules\\git;d:\\ospanel\\modules\\git\\bin;d:\\ospanel\\modules\\git\\mingw\\bin;d:\\ospanel\\modules\\git\\cmd;d:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12\\bin;d:\\ospanel\\modules\\http\\Apache-PHP-7-x64+Nginx-1.12;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'myblog'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/OSPanel/domains/myblog'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/OSPanel/domains/myblog/backend/index.php'
+    'REMOTE_PORT' => '2032'
+    'REDIRECT_URL' => '/backend/news_translate'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.0'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news_translate'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1582611356.772
+    'REQUEST_TIME' => 1582611356
+    'argv' => []
+    'argc' => 0
+]
