@@ -4,14 +4,14 @@
             <a href="<?=toRoute('/')?>" class="site_title"><i class="fa fa-code"></i></a>
         </div>
         <?php if (!Yii::$app->user->isGuest):?>
-            <?php $user = \common\models\User::findOne(Yii::$app->user->id);?>
-            <!-- menu prile quick info -->
-            <div class="profile">
-                <div class="profile_info">
-                    <span>Добро пожаловать,</span>
-                    <h2><?=$user->user_profile->full?></h2>
-                </div>
+        <?php $user = \common\models\User::findOne(Yii::$app->user->id);?>
+        <!-- menu prile quick info -->
+        <div class="profile">
+            <div class="profile_info">
+                <span>Welcome</span>
+                <h2><?=$user->user_profile->full?></h2>
             </div>
+        </div>
         <?php endif;?>
         <!-- /menu prile quick info -->
         <div class="clearfix"></div>
@@ -26,17 +26,31 @@
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-user"></i> Пользователи<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-users"></i> Users<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu" style="display: none">
-                            <li><a href="<?=toRoute('/user/index')?>">Список пользователей</a>
+                            <li><a class="fa fa-user" href="<?=toRoute('/user/index')?>">Users</a>
+                            </li>
+                            <li><a class="fa fa-user" href="<?=toRoute('/user-profile/index')?>">Profiles</a>
                             </li>
                         </ul>
                     </li>
-                    <li><a><i class="fa fa-bookmark"></i> Языки<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-graduation-cap"></i> Course<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu" style="display: none">
-                            <li><a href="<?=toRoute('/lang/index')?>">Список языков</a>
+                            <li><a class="fa fa-graduation-cap" href="<?=toRoute('/category/index')?>">Category</a>
+                            </li>
+                            <li><a class="fa fa-language" href="<?=toRoute('/category-translate/index')?>">Category Translate</a>
+                            </li>
+                            <li><a class="fa fa-university" href="<?=toRoute('/course/index')?>">Course</a>
+                            </li>
+                            <li><a class="fa fa-language" href="<?=toRoute('/course-translate/index')?>">Course Translate</a>
+                            </li>
+                            <li><a class="fa fa-info" href="<?=toRoute('/course-information/index')?>">Course Info</a>
+                            </li>
+                            <li><a class="fa fa-language" href="<?=toRoute('/course-info-translate/index')?>">Course Info Translate</a>
                             </li>
                         </ul>
+                    </li>
+                    <li><a class="fa fa-globe" href="<?=toRoute('/lang/index')?>">Languages</a>
                     </li>
                 </ul>
             </div>
@@ -48,7 +62,8 @@
             <a href="" data-toggle="tooltip" data-placement="top" title="Settings">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
             </a>
-            <a href="<?=toRoute('/site/logout')?>" data-method="post" class="pull-right" data-toggle="tooltip" data-placement="top" title="Logout">
+            <a href="<?=toRoute('/site/logout')?>" data-method="post" class="pull-right" data-toggle="tooltip"
+                data-placement="top" title="Logout">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
             </a>
         </div>
