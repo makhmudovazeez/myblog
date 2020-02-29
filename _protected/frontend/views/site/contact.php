@@ -3,6 +3,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use common\models\Contact;
+use common\models\Feedback;
 $contact = Contact::find()->one();
 
 /* @var $this yii\web\View */
@@ -64,18 +65,17 @@ $this->params['breadcrumbs'][] = $this->title;
 						<div class="col-lg-8">
 							<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
 								<div class="row">	
-									<div class="col-lg-6 form-group">
-										<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-									
-										<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+									<div class="col-lg-8 form-group">
+									<?php $form = ActiveForm::begin() ?>
 
-										<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required="" type="text">
-									</div>
-									<div class="col-lg-6 form-group">
-										<textarea class="common-textarea form-control" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required=""></textarea>				
+									<?=$form->field($feedback, 'name')->textInput(["placeholder"=>"Your name"])->label(false)?>
+									<?=$form->field($feedback, 'message')->textarea(["placeholder"=>"Your Message", "rows"=>"6"])->label(false)?>
+									<input type="submit" value="Send Message">
+
+									<?php ActiveForm::end(); ?>									
 									</div>
 									<div class="col-lg-12">
-										<div class="alert-msg" style="text-align: left;"></div>
+										<div class="alert-msg" style="text-align: right;"></div>
 										<button class="genric-btn primary" style="float: right;">Send Message</button>											
 									</div>
 								</div>

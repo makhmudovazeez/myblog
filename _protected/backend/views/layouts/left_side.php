@@ -50,6 +50,30 @@
                             </li>
                         </ul>
                     </li>
+                    <li><a><i class="fa fa-graduation-cap"></i> News<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="display: none">
+                            <li><a class="fa fa-graduation-cap" href="<?=toRoute('/category/index')?>">News</a>
+                            </li>
+                            <li><a class="fa fa-language" href="<?=toRoute('/category-translate/index')?>">News Translate</a>
+                            </li>
+                            <li><a class="fa fa-university" href="<?=toRoute('/course/index')?>">News Info</a>
+                            </li>
+                            <li><a class="fa fa-language" href="<?=toRoute('/news-information-translate/index')?>">News Info Translate</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-users"></i>Contacts<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu" style="display: none">
+                            <li><a class="fa fa-user" href="<?=toRoute('/feedback/index')?>">Feedback</a>
+                            </li>
+                            <li><a class="fa fa-user" href="<?=toRoute('/comments/index')?>">Comments</a>
+                            </li>
+                            <li><a class="fa fa-user" href="<?=toRoute('/contact/index')?>">Contact</a>
+                            </li>
+                            <li><a class="fa fa-user" href="<?=toRoute('/contact-translate/index')?>">Contact Translate</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a class="fa fa-globe" href="<?=toRoute('/lang/index')?>">Languages</a>
                     </li>
                 </ul>

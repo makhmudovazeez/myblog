@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use common\models\LoginForm;
 use common\models\User;
+use common\models\Feedback;
 use frontend\models\AccountActivation;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
@@ -137,7 +138,16 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
-        return $this->render('contact');
+        $feedback = new Feedback();
+
+        if($feedback->load(Yii::$app->request->post()) && $feedback->validate()){
+            $feedback->save();
+            // set Flesh
+        }
+        
+        return $this->render('contact', [
+            'feedback' => $feedback,
+        ]);
     }
 
 //------------------------------------------------------------------------------------------------//
