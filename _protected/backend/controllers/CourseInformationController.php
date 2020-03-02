@@ -8,6 +8,8 @@ use common\models\CourseInformationSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+
 
 /**
  * CourseInformationController implements the CRUD actions for CourseInformation model.

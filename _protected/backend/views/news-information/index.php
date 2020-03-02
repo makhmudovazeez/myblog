@@ -26,8 +26,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'news_id',
-            'image',
-
+            [
+                'attribute' => 'image',
+                'format' => 'html',
+                'value' => function($photo){
+                    return Html::img("../../../uploads/newsinfo/" . $photo->image, ['style' => 'width:150px']);
+                }
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

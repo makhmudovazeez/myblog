@@ -41,7 +41,7 @@ return [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
         ],
-        'language'=>'ru',
+        'language'=>'en',
         'i18n' => [
             'translations' => [
                 '*' => [

@@ -67,4 +67,9 @@ class CategoryTranslate extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Lang::className(), ['id' => 'lang_id']);
     }
+
+    
+    public function getLangId(){
+        return $this->lang->name;
+    }
 }

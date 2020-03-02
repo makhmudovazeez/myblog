@@ -45,10 +45,10 @@ $course = Course::find()->all();
                     <li><a href="<?=Url::to(['index'])?>">HOME</a></li>
                     <li><a href="<?=Url::to(['about'])?>">ABOUT</a></li>
                     <li><a href="<?=Url::to(['gallery'])?>">GALLERY</a></li>
-                    <li class="menu-has-children"><a href="<?=Url::to(['courses', 'id' => "all", 'type' => 'all'])?>">COURSES</a>
+                    <li class="menu-has-children"><a href="<?=Url::to(['category'])?>">COURSES</a>
                         <ul>
                         <?php foreach($category as $ct): ?>
-                            <li class="menu-has-children"><a href="<?=Url::to(['courses', 'id' => $ct->id, 'type' => "category"])?>"><?=$ct->title?></a>
+                            <li class="menu-has-children"><a href="<?=Url::to(['courses', 'id' => $ct->id, 'type' => "all"])?>"><?=$ct->title?></a>
                                 <ul>
                                 <?php foreach($course as $courses): ?>
                                     <?php if($courses->category_id == $ct->id): ?>

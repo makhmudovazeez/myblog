@@ -3,7 +3,11 @@ namespace frontend\controllers;
 
 use common\models\LoginForm;
 use common\models\User;
-use common\models\Contact;;
+use common\models\Category;
+use common\models\Course;
+use common\models\Contact;
+use common\models\Gallery;
+use common\models\News;
 use common\models\Feedback;
 use frontend\models\AccountActivation;
 use frontend\models\PasswordResetRequestForm;
@@ -89,37 +93,38 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-
-        return $this->render('index');
+        $news = News::find()->all();
+        return $this->render('index',[
+            'news' => $news,
+        ]);
     }
 
     public function actionGallery()
     {
+        $gallery = Gallery::find()->all()->desc();
 
-        return $this->render('gallery');
+        return $this->render('gallery',[
+            'gallery' => $gallery,
+        ]);
     }
 
+    public function actionCategory()
+    {
+            $model = Category::find()->all();
+            return $this->render('category', [
+                'model' => $model,
+            ]);
+
+    }
     public function actionCourses($id, $type)
     {
         if($type == 'all' && $id != null){
-            $model = Category::find()->all();
+            $model = Course::find()->all();
             return $this->render('courses', [
                 'model' => $model,
             ]);
         }
-        if($type == 'courses' && $id != null){
-            $model = Courses::find()->where(['category_id' => $id]);
-            return $this->render('courses', [
-                'model' => $model,
-            ]);
-        }
-        if($type == 'category' && $id != null){
-            $model = Category::find()->all();
-            return $this->render('courses', [
-                'model' => $model,
-            ]);
-        }
-        
+
     }
 
 

@@ -71,4 +71,10 @@ class Course extends \yii\db\ActiveRecord
      
         return CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language]) ? CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language])->title : "";
     }
+    
+    public function getLangId(){
+        return $this->lang->name;
+    }
+
+
 }

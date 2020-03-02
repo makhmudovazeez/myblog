@@ -77,206 +77,43 @@ $this->title = Yii::t('app', "Home");
 <!-- End feature Area -->
 
 <!-- Start popular-course Area -->
+<?php if($news):?>
 <section class="popular-course-area section-gap">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">Popular Courses we offer</h1>
-                    <p>There is a moment in the life of any aspiring.</p>
+                    <h1 class="mb-10">News</h1>
+                    <p>I am posting news here </p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="active-popular-carusel">
+                <?php foreach($news as $new): ?>
                 <div class="single-popular-carusel">
                     <div class="thumb-wrap relative">
                         <div class="thumb relative">
                             <div class="overlay overlay-bg"></div>
-                            <img class="/uploads/img-fluid" src="/uploads/img/p1.jpg" alt="">
-                        </div>
-                        <div class="meta d-flex justify-content-between">
-                            <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                            <h4>$150</h4>
+                            <img class="/uploads/img-fluid" src="/uploads/news/<?=$new->image?>" alt="">
                         </div>
                     </div>
                     <div class="details">
                         <a href="#">
                             <h4>
-                                Learn Designing
+                            <?=$new->title?>
                             </h4>
                         </a>
                         <p>
-                            When television was young, there was a hugely popular show based on the still popular
-                            fictional characte
+                        <?=$new->message?>
                         </p>
                     </div>
                 </div>
-                <div class="single-popular-carusel">
-                    <div class="thumb-wrap relative">
-                        <div class="thumb relative">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="/uploads/img-fluid" src="/uploads/img/p2.jpg" alt="">
-                        </div>
-                        <div class="meta d-flex justify-content-between">
-                            <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                            <h4>$150</h4>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="#">
-                            <h4>
-                                Learn React js beginners
-                            </h4>
-                        </a>
-                        <p>
-                            When television was young, there was a hugely popular show based on the still popular
-                            fictional characte
-                        </p>
-                    </div>
-                </div>
-                <div class="single-popular-carusel">
-                    <div class="thumb-wrap relative">
-                        <div class="thumb relative">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="/uploads/img-fluid" src="/uploads/img/p3.jpg" alt="">
-                        </div>
-                        <div class="meta d-flex justify-content-between">
-                            <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                            <h4>$150</h4>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="#">
-                            <h4>
-                                Learn Photography
-                            </h4>
-                        </a>
-                        <p>
-                            When television was young, there was a hugely popular show based on the still popular
-                            fictional characte
-                        </p>
-                    </div>
-                </div>
-                <div class="single-popular-carusel">
-                    <div class="thumb-wrap relative">
-                        <div class="thumb relative">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="/uploads/img-fluid" src="/uploads/img/p4.jpg" alt="">
-                        </div>
-                        <div class="meta d-flex justify-content-between">
-                            <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                            <h4>$150</h4>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="#">
-                            <h4>
-                                Learn Surveying
-                            </h4>
-                        </a>
-                        <p>
-                            When television was young, there was a hugely popular show based on the still popular
-                            fictional characte
-                        </p>
-                    </div>
-                </div>
-                <div class="single-popular-carusel">
-                    <div class="thumb-wrap relative">
-                        <div class="thumb relative">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="/uploads/img-fluid" src="/uploads/img/p1.jpg" alt="">
-                        </div>
-                        <div class="meta d-flex justify-content-between">
-                            <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                            <h4>$150</h4>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="#">
-                            <h4>
-                                Learn Designing
-                            </h4>
-                        </a>
-                        <p>
-                            When television was young, there was a hugely popular show based on the still popular
-                            fictional characte
-                        </p>
-                    </div>
-                </div>
-                <div class="single-popular-carusel">
-                    <div class="thumb-wrap relative">
-                        <div class="thumb relative">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="/uploads/img-fluid" src="/uploads/img/p2.jpg" alt="">
-                        </div>
-                        <div class="meta d-flex justify-content-between">
-                            <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                            <h4>$150</h4>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="#">
-                            <h4>
-                                Learn React js beginners
-                            </h4>
-                        </a>
-                        <p>
-                            When television was young, there was a hugely popular show based on the still popular
-                            fictional characte
-                        </p>
-                    </div>
-                </div>
-                <div class="single-popular-carusel">
-                    <div class="thumb-wrap relative">
-                        <div class="thumb relative">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="/uploads/img-fluid" src="/uploads/img/p3.jpg" alt="">
-                        </div>
-                        <div class="meta d-flex justify-content-between">
-                            <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                            <h4>$150</h4>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="#">
-                            <h4>
-                                Learn Photography
-                            </h4>
-                        </a>
-                        <p>
-                            When television was young, there was a hugely popular show based on the still popular
-                            fictional characte
-                        </p>
-                    </div>
-                </div>
-                <div class="single-popular-carusel">
-                    <div class="thumb-wrap relative">
-                        <div class="thumb relative">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="/uploads/img-fluid" src="/uploads/img/p4.jpg" alt="">
-                        </div>
-                        <div class="meta d-flex justify-content-between">
-                            <p><span class="lnr lnr-users"></span> 355 <span class="lnr lnr-bubble"></span>35</p>
-                            <h4>$150</h4>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="#">
-                            <h4>
-                                Learn Surveying
-                            </h4>
-                        </a>
-                        <p>
-                            When television was young, there was a hugely popular show based on the still popular
-                            fictional characte
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <?php endforeach; ?>
         </div>
     </div>
 </section>
+<?php endif;?>
 <!-- End popular-course Area -->
 
 

@@ -24,10 +24,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'title',
+            [
+                'attribute' => 'lang_id',
+                'label' => 'Language',
+                'value' => function ($data) {
+                    return $data->langId;
+                },
+            ],
             'course_id',
-            'lang_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

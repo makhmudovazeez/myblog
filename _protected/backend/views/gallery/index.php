@@ -25,9 +25,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'image',
             'size',
+            [
+                'attribute' => 'image',
+                'format' => 'html',
+                'value' => function($photo){
+                    return Html::img("../../../uploads/gallery/" . $photo->image, ['style' => 'width:150px']);
+                }
+            ],
+            
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

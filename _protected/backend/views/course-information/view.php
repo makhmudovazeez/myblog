@@ -29,8 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'image',
             'course_id',
+            [
+                'attribute' => 'image',
+                'format' => 'html',
+                'value' => function($photo){
+                    return Html::img("../../../uploads/courseinfo/" . $photo->image, ['style' => 'width:150px']);
+                }
+            ],
         ],
     ]) ?>
 

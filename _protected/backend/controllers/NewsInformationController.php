@@ -8,6 +8,8 @@ use common\models\NewsInformationSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+
 
 /**
  * NewsInformationController implements the CRUD actions for NewsInformation model.

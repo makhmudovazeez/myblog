@@ -24,11 +24,28 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'address',
-            'contact_id',
-            'lang_id',
-
+            [
+                'attribute' => 'lang_id',
+                'label' => 'Language',
+                'value' => function ($data) {
+                    return $data->langId;
+                },
+            ],
+            [
+                'attribute' => 'email',
+                'label' => 'Email',
+                'value' => function ($data) {
+                    return $data->Email;
+                },
+            ],
+            [
+                'attribute' => 'phone',
+                'label' => 'Phone',
+                'value' => function ($data) {
+                    return $data->Phone;
+                },
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

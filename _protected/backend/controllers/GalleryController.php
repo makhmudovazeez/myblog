@@ -8,6 +8,8 @@ use common\models\GallerySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+
 
 /**
  * GalleryController implements the CRUD actions for Gallery model.
@@ -61,7 +63,7 @@ class GalleryController extends BackendController
             $model->photo = null;
             
             $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         return $this->render('create', [
             'model' => $model,

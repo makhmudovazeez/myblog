@@ -1,7 +1,4 @@
 <?php
-use common\models\Gallery;
-$gallery = Gallery::find()->all();
-
 ?>
 <!-- start banner Area -->
 <section class="banner-area relative about-banner" id="home">
@@ -26,11 +23,11 @@ $gallery = Gallery::find()->all();
         <div class="row">
             <?php foreach($gallery as $image): ?>
             <div class="col-lg-<?=$image->size?>">
-                <a href="/uploads/gallery/<?=$image->title?>" class="img-gal">
+                <a href="/uploads/gallery/<?=$image->image?>" class="img-gal">
                     <div class="single-imgs relative">
                         <div class="overlay overlay-bg"></div>
                         <div class="relative">
-                            <img class="img-fluid" src="/uploads/gallery/<?=$image->title?>" alt="">
+                            <img class="img-fluid" src="/uploads/gallery/<?=$image->image?>" alt="">
                         </div>
                     </div>
                 </a>

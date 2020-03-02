@@ -10,6 +10,7 @@ use Yii;
  * @property integer $id
  * @property string $image
  * @property integer $size
+ * @property integer $photo
  */
 class Gallery extends \yii\db\ActiveRecord
 {

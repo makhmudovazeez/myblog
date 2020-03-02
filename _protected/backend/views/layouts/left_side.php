@@ -74,7 +74,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a class="fa fa-globe" href="<?=toRoute('/gallery/index')?>">Gallery</a>
+                    <li><a class="fa fa-picture-o" href="<?=toRoute('/gallery/index')?>">Gallery</a>
                     </li>
                     <li><a class="fa fa-globe" href="<?=toRoute('/lang/index')?>">Languages</a>
                     </li>

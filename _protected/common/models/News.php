@@ -9,7 +9,6 @@ use Yii;
  *
  * @property integer $id
  * @property string $image
- * @property string $message
  *
  * @property NewsInformation[] $newsInformations
  * @property NewsTranslate[] $newsTranslates
@@ -31,8 +30,8 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['image', 'message'], 'required'],
-            [['image', 'message'], 'string', 'max' => 255],
+            [['image'], 'required'],
+            [['image'], 'string', 'max' => 255],
             ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
         ];
     }
@@ -45,7 +44,6 @@ class News extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'image' => 'Image',
-            'message' => 'Message',
             'photo' => 'Photo',
         ];
     }
@@ -64,5 +62,21 @@ class News extends \yii\db\ActiveRecord
     public function getNewsTranslates()
     {
         return $this->hasMany(NewsTranslate::className(), ['news_id' => 'id']);
+    }
+
+    public function getLanguage(){
+        return Lang::findOne(['url' => Yii::$app->language])->id;
+    }
+
+    public function getTitle()
+    {
+     
+        return NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language]) ? NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language])->title : "";
+    }
+
+    public function getMessage()
+    {
+     
+        return NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language]) ? NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language])->message : "";
     }
 }

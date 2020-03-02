@@ -71,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
 									<?=$form->field($feedback, 'message')->textarea(["placeholder"=>"Your Message", "rows"=>"6"])->label(false)?>
 									</div>
 									<div class="col-lg-6">
-										<input type="submit" value="Send Message" class="genric-btn primary" style="float: center;"></input>											
+										<input type="submit" value="Send Message" class="genric-btn primary" style="float: center;">											
 									<?php ActiveForm::end() ?>									
 									
 								</div>

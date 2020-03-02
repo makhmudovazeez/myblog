@@ -30,8 +30,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'news_id',
-            'image',
-        ],
+            [
+                'attribute' => 'image',
+                'format' => 'html',
+                'value' => function($photo){
+                    return Html::img("../../../uploads/newsinfo/" . $photo->image, ['style' => 'width:150px']);
+                }
+            ],        ],
     ]) ?>
 
 </div>

@@ -72,4 +72,9 @@ class UserProfile extends \yii\db\ActiveRecord
     public function getFull(){
         return $this->first . ' ' . $this->last;
     }
+
+    public function getRole(){
+        return $this->user->roleName;
+    }
+    
 }

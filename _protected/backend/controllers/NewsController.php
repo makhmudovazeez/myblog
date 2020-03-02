@@ -8,6 +8,8 @@ use common\models\NewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+
 
 /**
  * NewsController implements the CRUD actions for News model.
@@ -74,7 +76,7 @@ class NewsController extends Controller
             $model->photo = null;
             
             $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         return $this->render('create', [
             'model' => $model,

@@ -71,4 +71,5 @@ class UserProfileSearch extends UserProfile
 
         return $dataProvider;
     }
+    
 }
