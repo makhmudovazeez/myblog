@@ -11,9 +11,11 @@ use yii\widgets\ActiveForm;
 <div class="category-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
+    <div class="row">
+        <div class="col-md-6">
     <?= $form->field($model, 'created_at')->textInput() ?>
-
+        </div>
+    </div>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

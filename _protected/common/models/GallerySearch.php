@@ -19,7 +19,7 @@ class GallerySearch extends Gallery
     {
         return [
             [['id', 'size'], 'integer'],
-            [['title'], 'safe'],
+            [['image'], 'safe'],
         ];
     }
 
@@ -63,7 +63,7 @@ class GallerySearch extends Gallery
             'size' => $this->size,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title]);
+        $query->andFilterWhere(['like', 'image', $this->image]);
 
         return $dataProvider;
     }

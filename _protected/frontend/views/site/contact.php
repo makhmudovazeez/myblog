@@ -4,7 +4,6 @@ use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use common\models\Contact;
 use common\models\Feedback;
-$contact = Contact::find()->one();
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
@@ -70,14 +69,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 									<?=$form->field($feedback, 'name')->textInput(["placeholder"=>"Your name"])->label(false)?>
 									<?=$form->field($feedback, 'message')->textarea(["placeholder"=>"Your Message", "rows"=>"6"])->label(false)?>
-									<input type="submit" value="Send Message">
-
-									<?php ActiveForm::end(); ?>									
 									</div>
-									<div class="col-lg-12">
-										<div class="alert-msg" style="text-align: right;"></div>
-										<button class="genric-btn primary" style="float: right;">Send Message</button>											
-									</div>
+									<div class="col-lg-6">
+										<input type="submit" value="Send Message" class="genric-btn primary" style="float: center;"></input>											
+									<?php ActiveForm::end() ?>									
+									
 								</div>
 							</form>	
 						</div>

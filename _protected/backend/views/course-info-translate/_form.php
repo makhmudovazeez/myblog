@@ -1,5 +1,5 @@
 <?php
-
+use mihaildev\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -12,11 +12,16 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'information')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'course_info_id')->textInput() ?>
 
     <?= $form->field($model, 'lang_id')->textInput() ?>
+
+    <?= $form->field($model, 'information')->widget(CKEditor::className(),[
+        'editorOptions' => [
+            'preset' => 'full',
+            'inline' => false,
+        ],
+    ]); ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -16,6 +16,7 @@ use Yii;
  */
 class NewsInformation extends \yii\db\ActiveRecord
 {
+    public $photo;
     /**
      * @inheritdoc
      */
@@ -34,6 +35,7 @@ class NewsInformation extends \yii\db\ActiveRecord
             [['news_id'], 'integer'],
             [['image'], 'string', 'max' => 255],
             [['news_id'], 'exist', 'skipOnError' => true, 'targetClass' => News::className(), 'targetAttribute' => ['news_id' => 'id']],
+            ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
         ];
     }
 
@@ -46,6 +48,7 @@ class NewsInformation extends \yii\db\ActiveRecord
             'id' => 'ID',
             'news_id' => 'News ID',
             'image' => 'Image',
+            'photo' => 'Photo',
         ];
     }
 

@@ -65,13 +65,20 @@ class NewsController extends Controller
     {
         $model = new News();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+        
+            $model->photo = UploadedFile::getInstance($model, 'photo');
+            $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
+            $model->photo->saveAs("../uploads/news/" . $filename);
+            $model->image=$filename;
+            $model->photo = null;
+            
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
         }
+        return $this->render('create', [
+            'model' => $model,
+        ]);
     }
 
     /**

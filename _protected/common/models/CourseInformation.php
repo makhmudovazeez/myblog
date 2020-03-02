@@ -16,6 +16,7 @@ use Yii;
  */
 class CourseInformation extends \yii\db\ActiveRecord
 {
+    public $photo;
     /**
      * @inheritdoc
      */
@@ -34,6 +35,7 @@ class CourseInformation extends \yii\db\ActiveRecord
             [['course_id'], 'integer'],
             [['image'], 'string', 'max' => 255],
             [['course_id'], 'exist', 'skipOnError' => true, 'targetClass' => Course::className(), 'targetAttribute' => ['course_id' => 'id']],
+            ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
         ];
     }
 
@@ -46,6 +48,7 @@ class CourseInformation extends \yii\db\ActiveRecord
             'id' => 'ID',
             'image' => 'Image',
             'course_id' => 'Course ID',
+            'photo' => 'Photo',
         ];
     }
 

@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use common\models\LoginForm;
 use common\models\User;
+use common\models\Contact;;
 use common\models\Feedback;
 use frontend\models\AccountActivation;
 use frontend\models\PasswordResetRequestForm;
@@ -10,6 +11,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use Yii;
 use yii\base\InvalidParamException;
+use yii\base\Model;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\helpers\Html;
@@ -139,14 +141,17 @@ class SiteController extends Controller
     public function actionContact()
     {
         $feedback = new Feedback();
+        $contact = Contact::find()->one();
 
         if($feedback->load(Yii::$app->request->post()) && $feedback->validate()){
+            var_dump($feedback->load(Yii::$app->request->post()));die;
             $feedback->save();
             // set Flesh
         }
         
         return $this->render('contact', [
             'feedback' => $feedback,
+            'contact' => $contact,
         ]);
     }
 
