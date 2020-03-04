@@ -19,6 +19,7 @@ class CourseSearch extends Course
     {
         return [
             [['id', 'category_id'], 'integer'],
+            [['image'], 'safe'],
         ];
     }
 
@@ -60,6 +61,7 @@ class CourseSearch extends Course
         $query->andFilterWhere([
             'id' => $this->id,
             'category_id' => $this->category_id,
+            'image' => $this->image,
         ]);
 
         return $dataProvider;

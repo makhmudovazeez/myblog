@@ -3,7 +3,9 @@
 function getTranslate($translate) {
     return Yii::t('main',$translate) !== "" ? Yii::t('main',$translate) : $translate;
 }
-
+function t($translate) {
+    return Yii::t('main', $translate) !== "" ? Yii::t('main',$translate) : $translate;
+}
 function siteUrl($actual = 0) {
     $url = \yii\helpers\Url::to('/', true);
     if(!$actual) {

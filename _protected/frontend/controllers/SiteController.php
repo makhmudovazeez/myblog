@@ -93,7 +93,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $news = News::find()->all();
+        $news = News::find()->orderBy(['id' => SORT_DESC])->all();
         return $this->render('index',[
             'news' => $news,
         ]);
@@ -101,7 +101,7 @@ class SiteController extends Controller
 
     public function actionGallery()
     {
-        $gallery = Gallery::find()->all()->desc();
+        $gallery = Gallery::find()->all();
 
         return $this->render('gallery',[
             'gallery' => $gallery,
@@ -119,8 +119,17 @@ class SiteController extends Controller
     public function actionCourses($id, $type)
     {
         if($type == 'all' && $id != null){
-            $model = Course::find()->all();
+            $model = Course::find()->where(['category_id' => $id]);
             return $this->render('courses', [
+                'model' => $model,
+            ]);
+        }
+
+    }
+    public function actionCourseInfo($id, $type)
+    {
+        if($type == 'all' && $id != null){
+            return $this->render('course-info', [
                 'model' => $model,
             ]);
         }
@@ -143,20 +152,21 @@ class SiteController extends Controller
      *
      * @return string|\yii\web\Response
      */
-    public function actionContact()
+    public function actionFeedback()
     {
-        $feedback = new Feedback();
         $contact = Contact::find()->one();
+        $course = Course::find()->all();
+        $model = new Feedback();
 
-        if($feedback->load(Yii::$app->request->post()) && $feedback->validate()){
-            var_dump($feedback->load(Yii::$app->request->post()));die;
-            $feedback->save();
+        if($model->load(Yii::$app->request->post())){
+            $model->save();
             // set Flesh
         }
-        
-        return $this->render('contact', [
-            'feedback' => $feedback,
+
+        return $this->render('feedback',[
+            'model' => $model,
             'contact' => $contact,
+            'course' => $course,
         ]);
     }
 

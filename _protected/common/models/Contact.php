@@ -8,7 +8,6 @@ use Yii;
  * This is the model class for table "contact".
  *
  * @property integer $id
- * @property string $address
  * @property string $email
  * @property string $phone
  * @property string $facebook
@@ -35,7 +34,7 @@ class Contact extends \yii\db\ActiveRecord
     {
         return [
             [['email', 'phone'], 'required'],
-            [['address', 'email', 'phone', 'facebook', 'instagram', 'twitter', 'telegram'], 'string', 'max' => 255],
+            [['email', 'phone', 'facebook', 'instagram', 'twitter', 'telegram'], 'string', 'max' => 255],
         ];
     }
 
@@ -46,7 +45,6 @@ class Contact extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'address' => 'Address',
             'email' => 'Email',
             'phone' => 'Phone',
             'facebook' => 'Facebook',

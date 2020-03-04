@@ -15,6 +15,7 @@ use Yii;
  */
 class Course extends \yii\db\ActiveRecord
 {
+    public $photo;
     /**
      * @inheritdoc
      */
@@ -29,9 +30,12 @@ class Course extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['category_id'], 'required'],
+            [['category_id', 'image'], 'required'],
             [['category_id'], 'integer'],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
+            [['image'], 'safe'],
+            ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
+
         ];
     }
 
@@ -43,6 +47,7 @@ class Course extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'category_id' => 'Category ID',
+            'image' => 'Image',
         ];
     }
 
@@ -75,6 +80,8 @@ class Course extends \yii\db\ActiveRecord
     public function getLangId(){
         return $this->lang->name;
     }
+
+    
 
 
 }

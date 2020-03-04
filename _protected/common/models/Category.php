@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $created_at
+ * @property string $image
  *
  * @property CategoryTranslate[] $categoryTranslates
  * @property Course[] $courses
@@ -16,6 +17,7 @@ use Yii;
  */
 class Category extends \yii\db\ActiveRecord
 {
+    public $photo;
     /**
      * @inheritdoc
      */
@@ -30,7 +32,9 @@ class Category extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_at'], 'safe'],
+            [['image'], 'required'],
+            [['created_at', 'image'], 'safe'],
+            ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
         ];
     }
 
@@ -42,6 +46,8 @@ class Category extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'created_at' => 'Created At',
+            'image' => 'Image',
+            'photo' => 'Photo',
         ];
     }
 
@@ -66,10 +72,9 @@ class Category extends \yii\db\ActiveRecord
         return Lang::findOne(['url' => Yii::$app->language])->id;
     }
 
-    public function getTitle()
+    public function getType()
     {
-     
-        return CategoryTranslate::findOne(['category_id' => $this->id, 'lang_id' => $this->language]) ? CategoryTranslate::findOne(['category_id' => $this->id, 'lang_id' => $this->language])->type : "";
+        return CategoryTranslate::findOne(['category_id' => $this->id, 'lang_id' => $this->language]) ? CategoryTranslate::findOne(['category_id' => $this->id, 'lang_id' => $this->language])->type : "no translate";
     }
 
 }

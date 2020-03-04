@@ -19,7 +19,7 @@ class CategorySearch extends Category
     {
         return [
             [['id'], 'integer'],
-            [['created_at'], 'safe'],
+            [['created_at', 'image'], 'safe'],
         ];
     }
 
@@ -61,6 +61,7 @@ class CategorySearch extends Category
         $query->andFilterWhere([
             'id' => $this->id,
             'created_at' => $this->created_at,
+            'image' => $this->image,
         ]);
 
         return $dataProvider;

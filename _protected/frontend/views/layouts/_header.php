@@ -48,7 +48,7 @@ $course = Course::find()->all();
                     <li class="menu-has-children"><a href="<?=Url::to(['category'])?>">COURSES</a>
                         <ul>
                         <?php foreach($category as $ct): ?>
-                            <li class="menu-has-children"><a href="<?=Url::to(['courses', 'id' => $ct->id, 'type' => "all"])?>"><?=$ct->title?></a>
+                            <li class="menu-has-children"><a href="<?=Url::to(['courses', 'id' => $ct->id, 'type' => "all"])?>"><?=$ct->type?></a>
                                 <ul>
                                 <?php foreach($course as $courses): ?>
                                     <?php if($courses->category_id == $ct->id): ?>
@@ -59,7 +59,7 @@ $course = Course::find()->all();
                             <?php endforeach; ?>
                         </ul>
                     </li>
-                    <li><a href="<?=Url::to(['contact'])?>">CONTACt</a></li>
+                    <li><a href="<?=Url::to(['feedback'])?>">FEEDBACK</a></li>
                     <?php if(Yii::$app->user->isGuest): ?>
                     <li><a href="<?=Url::to(['login'])?>">LOGIN</a></li>
                     <?php else: ?>
