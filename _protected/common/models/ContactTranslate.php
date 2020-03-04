@@ -80,4 +80,5 @@ class ContactTranslate extends \yii\db\ActiveRecord
         return $this->contact->phone;
     }
 
+
 }

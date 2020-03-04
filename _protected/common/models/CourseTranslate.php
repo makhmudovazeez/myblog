@@ -12,7 +12,7 @@ use Yii;
  * @property integer $course_id
  * @property integer $lang_id
  *
- * @property Category $course
+ * @property Course $course
  * @property Lang $lang
  */
 class CourseTranslate extends \yii\db\ActiveRecord
@@ -34,7 +34,7 @@ class CourseTranslate extends \yii\db\ActiveRecord
             [['title', 'course_id', 'lang_id'], 'required'],
             [['course_id', 'lang_id'], 'integer'],
             [['title'], 'string', 'max' => 255],
-            [['course_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['course_id' => 'id']],
+            [['course_id'], 'exist', 'skipOnError' => true, 'targetClass' => Course::className(), 'targetAttribute' => ['course_id' => 'id']],
             [['lang_id'], 'exist', 'skipOnError' => true, 'targetClass' => Lang::className(), 'targetAttribute' => ['lang_id' => 'id']],
         ];
     }
@@ -57,7 +57,7 @@ class CourseTranslate extends \yii\db\ActiveRecord
      */
     public function getCourse()
     {
-        return $this->hasOne(Category::className(), ['id' => 'course_id']);
+        return $this->hasOne(Course::className(), ['id' => 'course_id']);
     }
 
     /**

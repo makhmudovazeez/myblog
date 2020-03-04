@@ -76,5 +76,11 @@ class UserProfile extends \yii\db\ActiveRecord
     public function getRole(){
         return $this->user->roleName;
     }
+
+    public function getUsername()
+    {
+     
+        return User::findOne(['id' => $this->user_id])->username;
+    }
     
 }

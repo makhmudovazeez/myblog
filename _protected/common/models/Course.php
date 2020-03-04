@@ -71,10 +71,16 @@ class Course extends \yii\db\ActiveRecord
         return Lang::findOne(['url' => Yii::$app->language])->id;
     }
 
+    public function getType()
+    {
+     
+        return CategoryTranslate::findOne(['category_id' => $this->category_id, 'lang_id' => $this->language])->type;
+    }
+
     public function getTitle()
     {
      
-        return CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language]) ? CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language])->title : "";
+        return CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language]) ? CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language])->title : "No Translation";
     }
     
     public function getLangId(){

@@ -14,22 +14,8 @@ use yii\web\UploadedFile;
 /**
  * NewsInformationController implements the CRUD actions for NewsInformation model.
  */
-class NewsInformationController extends Controller
+class NewsInformationController extends BackendController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all NewsInformation models.
@@ -76,7 +62,7 @@ class NewsInformationController extends Controller
             $model->photo = null;
             
             $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         return $this->render('create', [
             'model' => $model,
@@ -94,7 +80,7 @@ class NewsInformationController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

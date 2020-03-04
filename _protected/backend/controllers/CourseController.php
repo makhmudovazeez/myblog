@@ -16,20 +16,6 @@ use yii\web\UploadedFile;
  */
 class CourseController extends BackendController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all Course models.
@@ -67,7 +53,7 @@ class CourseController extends BackendController
     {
         $model = new Course();
 
-        if ($model->load(Yii::$app->request->post()) && $model->photo) {
+        if ($model->load(Yii::$app->request->post())) {
         
             $model->photo = UploadedFile::getInstance($model, 'photo');
             $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
@@ -94,7 +80,7 @@ class CourseController extends BackendController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

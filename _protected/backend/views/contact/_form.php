@@ -11,19 +11,26 @@ use yii\widgets\ActiveForm;
 <div class="contact-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
-    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'facebook')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'instagram')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'twitter')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'telegram')->textInput(['maxlength' => true]) ?>
-
+    <div class="row">
+        <div class="col-md-6">
+            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+        <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+        <?= $form->field($model, 'facebook')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+        <?= $form->field($model, 'instagram')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+        <?= $form->field($model, 'twitter')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+        <?= $form->field($model, 'telegram')->textInput(['maxlength' => true]) ?>
+        </div>
+    </div>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

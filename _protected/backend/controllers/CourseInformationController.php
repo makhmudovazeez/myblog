@@ -14,22 +14,8 @@ use yii\web\UploadedFile;
 /**
  * CourseInformationController implements the CRUD actions for CourseInformation model.
  */
-class CourseInformationController extends Controller
+class CourseInformationController extends BackendController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all CourseInformation models.
@@ -76,7 +62,7 @@ class CourseInformationController extends Controller
             $model->photo = null;
             
             $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
         return $this->render('create', [
             'model' => $model,
@@ -94,7 +80,7 @@ class CourseInformationController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

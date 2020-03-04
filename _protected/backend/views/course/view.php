@@ -28,9 +28,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'category_id',
-            'image',
+            [
+                'attribute' => 'image',
+                'format' => 'html',
+                'value' => function($photo){
+                    return Html::img("../../../uploads/course/" . $photo->image, ['style' => 'width:150px']);
+                }
+            ],
+           'category_id',
         ],
     ]) ?>
 

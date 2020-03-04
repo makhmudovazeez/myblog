@@ -24,9 +24,20 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'category_id',
-            'image',
-
+            [
+                'attribute' => 'image',
+                'format' => 'html',
+                'value' => function($photo){
+                    return Html::img("../../../uploads/course/" . $photo->image, ['style' => 'width:150px']);
+                }
+            ],
+            [
+                'attribute' => 'category_id',
+                'label' => 'Category ID',
+                'value' => function ($data) {
+                    return $data->type;
+                },
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

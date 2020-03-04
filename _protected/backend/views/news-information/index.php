@@ -24,8 +24,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'news_id',
+            [
+                'attribute' => 'news_id',
+                'label' => 'News ID',
+                'value' => function ($data) {
+                    return $data->title;
+                },
+            ],
             [
                 'attribute' => 'image',
                 'format' => 'html',

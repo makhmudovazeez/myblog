@@ -24,13 +24,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'email:email',
             'phone',
-            'facebook',
             'instagram',
-            // 'twitter',
-            // 'telegram',
+            'telegram',
+            'facebook',
+            'twitter',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -31,7 +31,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'type',
             'category_id',
-            'lang_id',
+            [
+                'attribute' => 'lang_id',
+                'label' => 'Language',
+                'value' => function ($data) {
+                    return $data->langId;
+                },
+            ],
         ],
     ]) ?>
 

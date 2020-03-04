@@ -67,4 +67,10 @@ class CourseInformation extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Course::className(), ['id' => 'course_id']);
     }
+
+    public function getTitle()
+    {
+     
+        return CourseTranslate::findOne(['course_id' => $this->course_id])->title;
+    }
 }

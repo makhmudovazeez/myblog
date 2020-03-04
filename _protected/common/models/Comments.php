@@ -55,4 +55,10 @@ class Comments extends \yii\db\ActiveRecord
     {
         return $this->hasOne(UserProfile::className(), ['id' => 'user_profile_id']);
     }
+
+    public function getUsername()
+    {
+     
+        return User::findOne(['id' => $this->user_profile_id])->username;
+    }
 }

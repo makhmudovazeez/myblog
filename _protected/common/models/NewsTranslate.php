@@ -69,4 +69,7 @@ class NewsTranslate extends \yii\db\ActiveRecord
     {
         return $this->hasOne(News::className(), ['id' => 'news_id']);
     }
+    public function getLangId(){
+        return $this->lang->name;
+    }
 }

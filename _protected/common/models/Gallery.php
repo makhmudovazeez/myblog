@@ -17,14 +17,12 @@ class Gallery extends \yii\db\ActiveRecord
     public $photo;
     const size1 = 1;
     const size2 = 2;
-    const size3 = 3;
     const size4 = 4;
 
     public function getSizes($index=null){
         $arr = [
-            self::size1 => '3',
-            self::size2 => '4',
-            self::size3 => '6',
+            self::size1 => '4',
+            self::size2 => '5',
             self::size4 => '7',
         ];
 

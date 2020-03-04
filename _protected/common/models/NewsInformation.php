@@ -67,4 +67,14 @@ class NewsInformation extends \yii\db\ActiveRecord
     {
         return $this->hasMany(NewsInformationTranslate::className(), ['news_info_id' => 'id']);
     }
+
+    public function getLanguage(){
+        return Lang::findOne(['url' => Yii::$app->language])->id;
+    }
+
+    public function getTitle()
+    {
+        return NewsTranslate::findOne(['news_id' => $this->news_id, 'lang_id' => $this->language])->title;
+    }
+    
 }
