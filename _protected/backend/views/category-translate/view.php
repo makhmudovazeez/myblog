@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->langId;
                 },
             ],
+            'description',
         ],
     ]) ?>
 

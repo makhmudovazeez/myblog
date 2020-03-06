@@ -61,4 +61,16 @@ class Comments extends \yii\db\ActiveRecord
      
         return User::findOne(['id' => $this->user_profile_id])->username;
     }
+
+    public function getFirst()
+    {
+        return UserProfile::findOne(['id' => $this->user_profile_id])->first;
+    }
+
+    public function getLast()
+    {
+        return UserProfile::findOne(['id' => $this->user_profile_id])->last;
+    }
+
+
 }

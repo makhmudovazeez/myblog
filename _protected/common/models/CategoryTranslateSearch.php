@@ -19,7 +19,7 @@ class CategoryTranslateSearch extends CategoryTranslate
     {
         return [
             [['id', 'category_id', 'lang_id'], 'integer'],
-            [['type'], 'safe'],
+            [['type', 'description'], 'safe'],
         ];
     }
 
@@ -62,6 +62,7 @@ class CategoryTranslateSearch extends CategoryTranslate
             'id' => $this->id,
             'category_id' => $this->category_id,
             'lang_id' => $this->lang_id,
+            'description' => $this->description,
         ]);
 
         $query->andFilterWhere(['like', 'type', $this->type]);

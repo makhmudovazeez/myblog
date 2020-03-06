@@ -11,6 +11,7 @@ use Yii;
  * @property string $type
  * @property integer $category_id
  * @property integer $lang_id
+ * @property integer $description
  *
  * @property Category $category
  * @property Lang $lang
@@ -31,9 +32,9 @@ class CategoryTranslate extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type', 'category_id', 'lang_id'], 'required'],
+            [['type', 'category_id', 'lang_id', 'description'], 'required'],
             [['category_id', 'lang_id'], 'integer'],
-            [['type'], 'string', 'max' => 255],
+            [['type', 'description'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
             [['lang_id'], 'exist', 'skipOnError' => true, 'targetClass' => Lang::className(), 'targetAttribute' => ['lang_id' => 'id']],
         ];
@@ -49,6 +50,7 @@ class CategoryTranslate extends \yii\db\ActiveRecord
             'type' => 'Type',
             'category_id' => 'Category ID',
             'lang_id' => 'Lang ID',
+            'description' => 'Description'
         ];
     }
 

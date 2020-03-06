@@ -28,7 +28,8 @@ $course = Course::find()->all();
                     </ul>
                 </div>
                 <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-                    <a href="tel:<?=$contact->phone?>"><span class="lnr lnr-phone-handset"></span> <span class="text"><?=$contact->phone?></span></a>
+                    <a href="tel:<?=$contact->phone?>"><span class="lnr lnr-phone-handset"></span> <span
+                            class="text"><?=$contact->phone?></span></a>
                     <a href="mailto:<?=$contact->email?>"><span class="lnr lnr-envelope"></span> <span
                             class="text"><?=$contact->email?></span></a>
                 </div>
@@ -38,7 +39,7 @@ $course = Course::find()->all();
     <div class="container main-menu">
         <div class="row align-items-center justify-content-between d-flex">
             <div id="logo">
-                <a href="index.html"><img src="/uploads/img/logo.png" alt="" title="" /></a>
+                <a href="<?=Url::to(['index'])?>"><img src="/uploads/img/logo.png" alt="" title="" /></a>
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
@@ -47,16 +48,21 @@ $course = Course::find()->all();
                     <li><a href="<?=Url::to(['gallery'])?>">GALLERY</a></li>
                     <li class="menu-has-children"><a href="<?=Url::to(['category'])?>">COURSES</a>
                         <ul>
-                        <?php foreach($category as $ct): ?>
-                            <li class="menu-has-children"><a href="<?=Url::to(['courses', 'id' => $ct->id, 'type' => "all"])?>"><?=$ct->type?></a>
+                            <?php foreach($category as $ct): ?>
+                            <?php if($ct->type && $ct->type != 'No Translate'): ?>
+                            <li class="menu-has-children"><a
+                                    href="<?=Url::to(['courses', 'id' => $ct->id, 'type' => "all"])?>"><?=$ct->type?></a>
                                 <ul>
-                                <?php foreach($course as $courses): ?>
+                                    <?php foreach($course as $courses): ?>
+                                    <?php if($courses->title && $courses->title != 'No Translate'): ?>
                                     <?php if($courses->category_id == $ct->id): ?>
-                                    <li><a href="<?=Url::to(['courses', 'id' => $courses->id, 'type' => 'courses'])?>"><?=$courses->title?></a></li>
-                                    <?php endif; endforeach; ?>
+                                    <li><a
+                                            href="<?=Url::to(['course-info', 'id' => $courses->id, 'type' => 'courses'])?>"><?=$courses->title?></a>
+                                    </li>
+                                    <?php endif; endif; endforeach; ?>
                                 </ul>
                             </li>
-                            <?php endforeach; ?>
+                            <?php endif; endforeach; ?>
                         </ul>
                     </li>
                     <li><a href="<?=Url::to(['feedback'])?>">FEEDBACK</a></li>

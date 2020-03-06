@@ -6,6 +6,7 @@ use common\models\User;
 use common\models\Category;
 use common\models\Course;
 use common\models\Contact;
+use common\models\Comments;
 use common\models\Gallery;
 use common\models\News;
 use common\models\Feedback;
@@ -93,9 +94,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $category = Category::find()->all();
         $news = News::find()->orderBy(['id' => SORT_DESC])->all();
+        $comments = Comments::find()->all();
         return $this->render('index',[
             'news' => $news,
+            'category' => $category,
+            'comments' => $comments,
         ]);
     }
 
@@ -119,7 +124,7 @@ class SiteController extends Controller
     public function actionCourses($id, $type)
     {
         if($type == 'all' && $id != null){
-            $model = Course::find()->where(['category_id' => $id]);
+            $model = Course::find()->where(['category_id' => $id])->all();
             return $this->render('courses', [
                 'model' => $model,
             ]);
@@ -128,7 +133,8 @@ class SiteController extends Controller
     }
     public function actionCourseInfo($id, $type)
     {
-        if($type == 'all' && $id != null){
+        if($type == 'courses' && $id != null){
+            $model = Course::find()->where(['id' => $id]);
             return $this->render('course-info', [
                 'model' => $model,
             ]);

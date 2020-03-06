@@ -1,5 +1,5 @@
 <?php
-
+use mihaildev\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
@@ -32,7 +32,12 @@ use yii\helpers\ArrayHelper;
         </div>
     </div>
     <?= $form->field($model, 'type')->textInput(['maxlength' => true]) ?>
-
+    <?= $form->field($model, 'description')->widget(CKEditor::className(),[
+        'editorOptions' => [
+            'preset' => 'full',
+            'inline' => false,
+        ],
+    ]); ?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

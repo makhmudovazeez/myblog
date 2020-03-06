@@ -11,6 +11,7 @@ use Yii;
  * @property string $title
  * @property integer $course_id
  * @property integer $lang_id
+ * @property integer $description
  *
  * @property Course $course
  * @property Lang $lang
@@ -31,9 +32,9 @@ class CourseTranslate extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'course_id', 'lang_id'], 'required'],
+            [['title', 'course_id', 'lang_id', 'description'], 'required'],
             [['course_id', 'lang_id'], 'integer'],
-            [['title'], 'string', 'max' => 255],
+            [['title', 'description'], 'string', 'max' => 255],
             [['course_id'], 'exist', 'skipOnError' => true, 'targetClass' => Course::className(), 'targetAttribute' => ['course_id' => 'id']],
             [['lang_id'], 'exist', 'skipOnError' => true, 'targetClass' => Lang::className(), 'targetAttribute' => ['lang_id' => 'id']],
         ];
@@ -49,6 +50,7 @@ class CourseTranslate extends \yii\db\ActiveRecord
             'title' => 'Title',
             'course_id' => 'Course ID',
             'lang_id' => 'Lang ID',
+            'description' => 'Description',
         ];
     }
 

@@ -76,46 +76,40 @@ $this->title = Yii::t('app', "Home");
 </section>
 <!-- End feature Area -->
 
-<!-- Start popular-course Area -->
-<?php if($news):?>
-<section class="popular-course-area section-gap">
+<!-- Start upcoming-event Area -->
+<section class="upcoming-event-area section-gap">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">News</h1>
-                    <p>I am posting news here </p>
+                    <h1 class="mb-10">Types of Courses</h1>
+                    <p>If you are a serious astronomy fanatic like a lot of us</p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="active-popular-carusel">
-                <?php foreach($news as $new): ?>
-                <div class="single-popular-carusel">
-                    <div class="thumb-wrap relative">
-                        <div class="thumb relative">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="/uploads/img-fluid" src="/uploads/news/<?=$new->image?>" alt="">
-                        </div>
+            <div class="active-upcoming-event-carusel">
+                <?php foreach($category as $categ): ?>
+                <div class="single-carusel row align-items-center">
+                    <div class="col-12 col-md-6 thumb">
+                        <img class="/uploads/img-fluid" src="/uploads/category/<?=$categ->image?>" alt="">
                     </div>
-                    <div class="details">
+                    <div class="detials col-12 col-md-6">
+                        <p><?=$categ->created_at?></p>
                         <a href="#">
-                            <h4>
-                            <?=$new->title?>
-                            </h4>
+                            <h4><?=$categ->type?></h4>
                         </a>
                         <p>
-                        <?=$new->message?>
+                            <?=$categ->description?>
                         </p>
                     </div>
                 </div>
                 <?php endforeach; ?>
+            </div>
         </div>
     </div>
 </section>
-<?php endif;?>
-<!-- End popular-course Area -->
-
+<!-- End upcoming-event Area -->
 
 <!-- Start search-course Area -->
 <section class="search-course-area relative">
@@ -181,132 +175,17 @@ $this->title = Yii::t('app', "Home");
 </section>
 <!-- End search-course Area -->
 
-
-<!-- Start upcoming-event Area -->
-<section class="upcoming-event-area section-gap">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-70 col-lg-8">
-                <div class="title text-center">
-                    <h1 class="mb-10">Upcoming Events of our Institute</h1>
-                    <p>If you are a serious astronomy fanatic like a lot of us</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="active-upcoming-event-carusel">
-                <div class="single-carusel row align-items-center">
-                    <div class="col-12 col-md-6 thumb">
-                        <img class="/uploads/img-fluid" src="/uploads/img/e1.jpg" alt="">
-                    </div>
-                    <div class="detials col-12 col-md-6">
-                        <p>25th February, 2018</p>
-                        <a href="#">
-                            <h4>The Universe Through
-                                A Child S Eyes</h4>
-                        </a>
-                        <p>
-                            For most of us, the idea of astronomy is something we directly connect to “stargazing”,
-                            telescopes and seeing magnificent displays in the heavens.
-                        </p>
-                    </div>
-                </div>
-                <div class="single-carusel row align-items-center">
-                    <div class="col-12 col-md-6 thumb">
-                        <img class="/uploads/img-fluid" src="/uploads/img/e2.jpg" alt="">
-                    </div>
-                    <div class="detials col-12 col-md-6">
-                        <p>25th February, 2018</p>
-                        <a href="#">
-                            <h4>The Universe Through
-                                A Child S Eyes</h4>
-                        </a>
-                        <p>
-                            For most of us, the idea of astronomy is something we directly connect to “stargazing”,
-                            telescopes and seeing magnificent displays in the heavens.
-                        </p>
-                    </div>
-                </div>
-                <div class="single-carusel row align-items-center">
-                    <div class="col-12 col-md-6 thumb">
-                        <img class="/uploads/img-fluid" src="/uploads/img/e1.jpg" alt="">
-                    </div>
-                    <div class="detials col-12 col-md-6">
-                        <p>25th February, 2018</p>
-                        <a href="#">
-                            <h4>The Universe Through
-                                A Child S Eyes</h4>
-                        </a>
-                        <p>
-                            For most of us, the idea of astronomy is something we directly connect to “stargazing”,
-                            telescopes and seeing magnificent displays in the heavens.
-                        </p>
-                    </div>
-                </div>
-                <div class="single-carusel row align-items-center">
-                    <div class="col-12 col-md-6 thumb">
-                        <img class="/uploads/img-fluid" src="/uploads/img/e1.jpg" alt="">
-                    </div>
-                    <div class="detials col-12 col-md-6">
-                        <p>25th February, 2018</p>
-                        <a href="#">
-                            <h4>The Universe Through
-                                A Child S Eyes</h4>
-                        </a>
-                        <p>
-                            For most of us, the idea of astronomy is something we directly connect to “stargazing”,
-                            telescopes and seeing magnificent displays in the heavens.
-                        </p>
-                    </div>
-                </div>
-                <div class="single-carusel row align-items-center">
-                    <div class="col-12 col-md-6 thumb">
-                        <img class="/uploads/img-fluid" src="/uploads/img/e2.jpg" alt="">
-                    </div>
-                    <div class="detials col-12 col-md-6">
-                        <p>25th February, 2018</p>
-                        <a href="#">
-                            <h4>The Universe Through
-                                A Child S Eyes</h4>
-                        </a>
-                        <p>
-                            For most of us, the idea of astronomy is something we directly connect to “stargazing”,
-                            telescopes and seeing magnificent displays in the heavens.
-                        </p>
-                    </div>
-                </div>
-                <div class="single-carusel row align-items-center">
-                    <div class="col-12 col-md-6 thumb">
-                        <img class="/uploads/img-fluid" src="/uploads/img/e1.jpg" alt="">
-                    </div>
-                    <div class="detials col-12 col-md-6">
-                        <p>25th February, 2018</p>
-                        <a href="#">
-                            <h4>The Universe Through
-                                A Child S Eyes</h4>
-                        </a>
-                        <p>
-                            For most of us, the idea of astronomy is something we directly connect to “stargazing”,
-                            telescopes and seeing magnificent displays in the heavens.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End upcoming-event Area -->
-
 <!-- Start review Area -->
 <section class="review-area section-gap relative">
     <div class="overlay overlay-bg"></div>
     <div class="container">
         <div class="row">
             <div class="active-review-carusel">
+                <?php foreach($comments as $comment): ?>
                 <div class="single-review item">
                     <div class="title justify-content-start d-flex">
                         <a href="#">
-                            <h4>Fannie Rowe</h4>
+                            <h4><?=$comment->last?> <?=$comment->first?></h4>
                         </a>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
@@ -317,150 +196,16 @@ $this->title = Yii::t('app', "Home");
                         </div>
                     </div>
                     <p>
-                        Accessories Here you can find the best computer accessory for your laptop, monitor, printer,
-                        scanner, speaker. Here you can find the best computer accessory for your laptop, monitor,
-                        printer, scanner, speaker.
+                        <?=$comment->message?>
                     </p>
                 </div>
-                <div class="single-review item">
-                    <div class="title justify-content-start d-flex">
-                        <a href="#">
-                            <h4>Hulda Sutton</h4>
-                        </a>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <p>
-                        Accessories Here you can find the best computer accessory for your laptop, monitor, printer,
-                        scanner, speaker. Here you can find the best computer accessory for your laptop, monitor,
-                        printer, scanner, speaker.
-                    </p>
-                </div>
-                <div class="single-review item">
-                    <div class="title justify-content-start d-flex">
-                        <a href="#">
-                            <h4>Fannie Rowe</h4>
-                        </a>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <p>
-                        Accessories Here you can find the best computer accessory for your laptop, monitor, printer,
-                        scanner, speaker. Here you can find the best computer accessory for your laptop, monitor,
-                        printer, scanner, speaker.
-                    </p>
-                </div>
-                <div class="single-review item">
-                    <div class="title justify-content-start d-flex">
-                        <a href="#">
-                            <h4>Hulda Sutton</h4>
-                        </a>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <p>
-                        Accessories Here you can find the best computer accessory for your laptop, monitor, printer,
-                        scanner, speaker. Here you can find the best computer accessory for your laptop, monitor,
-                        printer, scanner, speaker.
-                    </p>
-                </div>
-                <div class="single-review item">
-                    <div class="title justify-content-start d-flex">
-                        <a href="#">
-                            <h4>Fannie Rowe</h4>
-                        </a>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <p>
-                        Accessories Here you can find the best computer accessory for your laptop, monitor, printer,
-                        scanner, speaker. Here you can find the best computer accessory for your laptop, monitor,
-                        printer, scanner, speaker.
-                    </p>
-                </div>
-                <div class="single-review item">
-                    <div class="title justify-content-start d-flex">
-                        <a href="#">
-                            <h4>Hulda Sutton</h4>
-                        </a>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <p>
-                        Accessories Here you can find the best computer accessory for your laptop, monitor, printer,
-                        scanner, speaker. Here you can find the best computer accessory for your laptop, monitor,
-                        printer, scanner, speaker.
-                    </p>
-                </div>
-                <div class="single-review item">
-                    <img src="/uploads/img/r1.png" alt="">
-                    <div class="title justify-content-start d-flex">
-                        <a href="#">
-                            <h4>Fannie Rowe</h4>
-                        </a>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <p>
-                        Accessories Here you can find the best computer accessory for your laptop, monitor, printer,
-                        scanner, speaker. Here you can find the best computer accessory for your laptop, monitor,
-                        printer, scanner, speaker.
-                    </p>
-                </div>
-                <div class="single-review item">
-                    <div class="title justify-content-start d-flex">
-                        <a href="#">
-                            <h4>Hulda Sutton</h4>
-                        </a>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <p>
-                        Accessories Here you can find the best computer accessory for your laptop, monitor, printer,
-                        scanner, speaker. Here you can find the best computer accessory for your laptop, monitor,
-                        printer, scanner, speaker.
-                    </p>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
 </section>
 <!-- End review Area -->
+
 
 <!-- Start cta-one Area -->
 <section class="cta-one-area relative section-gap">
@@ -492,70 +237,25 @@ $this->title = Yii::t('app', "Home");
                 </div>
             </div>
         </div>
+        <?php if($news):?>
         <div class="row">
+            <?php foreach($news as $new): ?>
             <div class="col-lg-3 col-md-6 single-blog">
                 <div class="thumb">
-                    <img class="/uploads/img-fluid" src="/uploads/img/b1.jpg" alt="">
+                    <img class="/uploads/img-fluid" src="/uploads/news/<?=$new->image?>" alt="">
                 </div>
-                <p class="meta">25 April, 2018 | By <a href="#">Mark Wiens</a></p>
                 <a href="blog-single.html">
-                    <h5>Addiction When Gambling Becomes A Problem</h5>
+                    <h5><?=$new->title?></h5>
                 </a>
                 <p>
-                    Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend
-                    hours in front of their.
+                    <?=$new->message?>
                 </p>
                 <a href="#" class="details-btn d-flex justify-content-center align-items-center"><span
                         class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>
             </div>
-            <div class="col-lg-3 col-md-6 single-blog">
-                <div class="thumb">
-                    <img class="/uploads/img-fluid" src="/uploads/img/b2.jpg" alt="">
-                </div>
-                <p class="meta">25 April, 2018 | By <a href="#">Mark Wiens</a></p>
-                <a href="blog-single.html">
-                    <h5>Computer Hardware Desktops And Notebooks</h5>
-                </a>
-                <p>
-                    Ah, the technical interview. Nothing like it. Not only does it cause anxiety, but it causes anxiety
-                    for several different reasons.
-                </p>
-                <a href="#" class="details-btn d-flex justify-content-center align-items-center"><span
-                        class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
-            <div class="col-lg-3 col-md-6 single-blog">
-                <div class="thumb">
-                    <img class="/uploads/img-fluid" src="/uploads/img/b3.jpg" alt="">
-                </div>
-                <p class="meta">25 April, 2018 | By <a href="#">Mark Wiens</a></p>
-                <a href="blog-single.html">
-                    <h5>Make Myspace Your Best Designed Space</h5>
-                </a>
-                <p>
-                    Plantronics with its GN Netcom wireless headset creates the next generation of wireless headset and
-                    other products such as wireless.
-                </p>
-                <a href="#" class="details-btn d-flex justify-content-center align-items-center"><span
-                        class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
-            <div class="col-lg-3 col-md-6 single-blog">
-                <div class="thumb">
-                    <img class="/uploads/img-fluid" src="/uploads/img/b4.jpg" alt="">
-                </div>
-                <p class="meta">25 April, 2018 | By <a href="#">Mark Wiens</a></p>
-                <a href="blog-single.html">
-                    <h5>Video Games Playing With Imagination</h5>
-                </a>
-                <p>
-                    About 64% of all on-line teens say that do things online that they wouldn’t want their parents to
-                    know about. 11% of all adult internet
-                </p>
-                <a href="#" class="details-btn d-flex justify-content-center align-items-center"><span
-                        class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
+            <?php endforeach; ?>
         </div>
+        <?php endif;?>
     </div>
 </section>
 <!-- End blog Area -->
-
-

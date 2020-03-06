@@ -19,7 +19,7 @@ class CourseTranslateSearch extends CourseTranslate
     {
         return [
             [['id', 'course_id', 'lang_id'], 'integer'],
-            [['title'], 'safe'],
+            [['title', 'description'], 'safe'],
         ];
     }
 
@@ -62,6 +62,7 @@ class CourseTranslateSearch extends CourseTranslate
             'id' => $this->id,
             'course_id' => $this->course_id,
             'lang_id' => $this->lang_id,
+            'description' => $this->description,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title]);
