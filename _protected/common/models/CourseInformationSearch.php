@@ -19,7 +19,6 @@ class CourseInformationSearch extends CourseInformation
     {
         return [
             [['id', 'course_id'], 'integer'],
-            [['image'], 'safe'],
         ];
     }
 
@@ -62,8 +61,6 @@ class CourseInformationSearch extends CourseInformation
             'id' => $this->id,
             'course_id' => $this->course_id,
         ]);
-
-        $query->andFilterWhere(['like', 'image', $this->image]);
 
         return $dataProvider;
     }

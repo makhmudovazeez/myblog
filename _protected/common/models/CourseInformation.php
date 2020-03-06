@@ -8,7 +8,6 @@ use Yii;
  * This is the model class for table "course_information".
  *
  * @property integer $id
- * @property string $image
  * @property integer $course_id
  *
  * @property CourseInfoTranslate[] $courseInfoTranslates
@@ -16,7 +15,6 @@ use Yii;
  */
 class CourseInformation extends \yii\db\ActiveRecord
 {
-    public $photo;
     /**
      * @inheritdoc
      */
@@ -33,9 +31,7 @@ class CourseInformation extends \yii\db\ActiveRecord
         return [
             [['course_id'], 'required'],
             [['course_id'], 'integer'],
-            [['image'], 'string', 'max' => 255],
             [['course_id'], 'exist', 'skipOnError' => true, 'targetClass' => Course::className(), 'targetAttribute' => ['course_id' => 'id']],
-            ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
         ];
     }
 
@@ -46,9 +42,7 @@ class CourseInformation extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'image' => 'Image',
             'course_id' => 'Course ID',
-            'photo' => 'Photo',
         ];
     }
 
@@ -71,6 +65,10 @@ class CourseInformation extends \yii\db\ActiveRecord
     public function getTitle()
     {
      
-        return CourseTranslate::findOne(['course_id' => $this->course_id])->title;
+        return CourseTranslate::findOne(['course_id' => $this->course_id, 'lang_id' => $this->language])->title;
+    }
+
+    public function getLanguage(){
+        return Lang::findOne(['url' => Yii::$app->language])->id;
     }
 }

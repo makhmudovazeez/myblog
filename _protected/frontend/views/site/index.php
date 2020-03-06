@@ -1,5 +1,5 @@
 <?php
-/* @var $this yii\web\View */
+use Yii\helpers\Url;
 $this->title = Yii::t('app', "Home");
 ?>
 
@@ -96,7 +96,7 @@ $this->title = Yii::t('app', "Home");
                     </div>
                     <div class="detials col-12 col-md-6">
                         <p><?=$categ->created_at?></p>
-                        <a href="#">
+                        <a href="">
                             <h4><?=$categ->type?></h4>
                         </a>
                         <p>
@@ -250,7 +250,7 @@ $this->title = Yii::t('app', "Home");
                 <p>
                     <?=$new->message?>
                 </p>
-                <a href="#" class="details-btn d-flex justify-content-center align-items-center"><span
+                <a href="<?//Yii\helpers\Url::to(['news'])?>" class="details-btn d-flex justify-content-center align-items-center"><span
                         class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>
             </div>
             <?php endforeach; ?>

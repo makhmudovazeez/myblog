@@ -33,7 +33,7 @@ class CourseInfoTranslate extends \yii\db\ActiveRecord
         return [
             [['information', 'course_info_id', 'lang_id'], 'required'],
             [['course_info_id', 'lang_id'], 'integer'],
-            [['information'], 'string', 'max' => 255],
+            [['information'], 'string', 'max' => 10000],
             [['course_info_id'], 'exist', 'skipOnError' => true, 'targetClass' => CourseInformation::className(), 'targetAttribute' => ['course_info_id' => 'id']],
             [['lang_id'], 'exist', 'skipOnError' => true, 'targetClass' => Lang::className(), 'targetAttribute' => ['lang_id' => 'id']],
         ];

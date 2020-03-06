@@ -60,7 +60,7 @@ class CategoryController extends BackendController
             $model->photo->saveAs("../uploads/category/" . $filename);
             $model->image=$filename;
             $model->photo = null;
-            $model->created_at = date('Y-m-d H:i:s');
+            $model->created_at = date('Y-m-d');
             $model->save();
             return $this->redirect(['index']);
         }

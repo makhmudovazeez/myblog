@@ -8,7 +8,6 @@ use common\models\CourseInformationSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
 
 
 /**
@@ -53,20 +52,13 @@ class CourseInformationController extends BackendController
     {
         $model = new CourseInformation();
 
-        if ($model->load(Yii::$app->request->post())) {
-        
-            $model->photo = UploadedFile::getInstance($model, 'photo');
-            $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
-            $model->photo->saveAs("../uploads/courseinfo/" . $filename);
-            $model->image=$filename;
-            $model->photo = null;
-            
-            $model->save();
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
         }
-        return $this->render('create', [
-            'model' => $model,
-        ]);
     }
 
     /**

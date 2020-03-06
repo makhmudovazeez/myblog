@@ -4,11 +4,15 @@ namespace frontend\controllers;
 use common\models\LoginForm;
 use common\models\User;
 use common\models\Category;
+use common\models\News;
+use common\models\NewsInformation;
 use common\models\Course;
 use common\models\Contact;
 use common\models\Comments;
 use common\models\Gallery;
-use common\models\News;
+use common\models\CourseInformation;
+use common\models\CourseInfoImage;
+use common\models\CourseInfoTranslate;
 use common\models\Feedback;
 use frontend\models\AccountActivation;
 use frontend\models\PasswordResetRequestForm;
@@ -113,6 +117,14 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionNews()
+    {
+            $model = News::find()->all();
+            return $this->render('news', [
+                'model' => $model,
+            ]);
+
+    }
     public function actionCategory()
     {
             $model = Category::find()->all();
@@ -134,14 +146,14 @@ class SiteController extends Controller
     public function actionCourseInfo($id, $type)
     {
         if($type == 'courses' && $id != null){
-            $model = Course::find()->where(['id' => $id]);
+            $getId = CourseInformation::find()->where(['course_id' => $id])->one();
+            $model = CourseInfoImage::find()->where(['course_info_id' => $getId->id])->all();
             return $this->render('course-info', [
                 'model' => $model,
             ]);
         }
 
     }
-
 
     /**
      * Displays the about static page.

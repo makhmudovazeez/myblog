@@ -48,6 +48,8 @@
                             </li>
                             <li><a class="fa fa-language" href="<?=toRoute('/course-info-translate/index')?>">Course Info Translate</a>
                             </li>
+                            <li><a class="fa fa-picture-o" href="<?=toRoute('/course-info-image/index')?>">Course Info Images</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-graduation-cap"></i> News<span class="fa fa-chevron-down"></span></a>

@@ -45,6 +45,7 @@ $course = Course::find()->all();
                 <ul class="nav-menu">
                     <li><a href="<?=Url::to(['index'])?>">HOME</a></li>
                     <li><a href="<?=Url::to(['about'])?>">ABOUT</a></li>
+                    <li><a href="<?=Url::to(['news'])?>">NEWS</a></li>
                     <li><a href="<?=Url::to(['gallery'])?>">GALLERY</a></li>
                     <li class="menu-has-children"><a href="<?=Url::to(['category'])?>">COURSES</a>
                         <ul>

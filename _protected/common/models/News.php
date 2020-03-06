@@ -71,7 +71,7 @@ class News extends \yii\db\ActiveRecord
     public function getTitle()
     {
      
-        return NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language]) ? NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language])->title : "";
+        return NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language]) ? NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language])->title : "No Translate";
     }
 
     public function getMessage()
