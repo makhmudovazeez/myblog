@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\Category;
+use common\models\CategoryTranslate;
 use common\models\CategorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -62,6 +63,14 @@ class CategoryController extends BackendController
             $model->photo = null;
             $model->created_at = date('Y-m-d');
             $model->save();
+            foreach ($model->description as $lang => $info) {
+                $translate = new CategoryTranslate(['category_id' => $model->id, 'lang_id' => $lang]);
+                $translate->description = $info;
+                if($model->title){
+                $translate->type = $model->title[$lang];
+                }
+                $translate->save();
+            }
             return $this->redirect(['index']);
         }
         return $this->render('create', [

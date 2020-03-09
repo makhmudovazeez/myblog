@@ -11,7 +11,6 @@ use common\models\Contact;
 use common\models\Comments;
 use common\models\Gallery;
 use common\models\CourseInformation;
-use common\models\CourseInfoImage;
 use common\models\CourseInfoTranslate;
 use common\models\Feedback;
 use frontend\models\AccountActivation;
@@ -146,8 +145,7 @@ class SiteController extends Controller
     public function actionCourseInfo($id, $type)
     {
         if($type == 'courses' && $id != null){
-            $getId = CourseInformation::find()->where(['course_id' => $id])->one();
-            $model = CourseInfoImage::find()->where(['course_info_id' => $getId->id])->all();
+            $model = CourseInformation::find()->where(['course_id' => $id])->all();
             return $this->render('course-info', [
                 'model' => $model,
             ]);

@@ -38,17 +38,9 @@
                         <ul class="nav child_menu" style="display: none">
                             <li><a class="fa fa-graduation-cap" href="<?=toRoute('/category/index')?>">Category</a>
                             </li>
-                            <li><a class="fa fa-language" href="<?=toRoute('/category-translate/index')?>">Category Translate</a>
-                            </li>
                             <li><a class="fa fa-university" href="<?=toRoute('/course/index')?>">Course</a>
                             </li>
-                            <li><a class="fa fa-language" href="<?=toRoute('/course-translate/index')?>">Course Translate</a>
-                            </li>
                             <li><a class="fa fa-info" href="<?=toRoute('/course-information/index')?>">Course Info</a>
-                            </li>
-                            <li><a class="fa fa-language" href="<?=toRoute('/course-info-translate/index')?>">Course Info Translate</a>
-                            </li>
-                            <li><a class="fa fa-picture-o" href="<?=toRoute('/course-info-image/index')?>">Course Info Images</a>
                             </li>
                         </ul>
                     </li>
@@ -56,11 +48,7 @@
                         <ul class="nav child_menu" style="display: none">
                             <li><a class="fa fa-graduation-cap" href="<?=toRoute('/news/index')?>">News</a>
                             </li>
-                            <li><a class="fa fa-language" href="<?=toRoute('/news-translate/index')?>">News Translate</a>
-                            </li>
                             <li><a class="fa fa-university" href="<?=toRoute('/news-information/index')?>">News Info</a>
-                            </li>
-                            <li><a class="fa fa-language" href="<?=toRoute('/news-information-translate/index')?>">News Info Translate</a>
                             </li>
                         </ul>
                     </li>
@@ -71,8 +59,6 @@
                             <li><a class="fa fa-user" href="<?=toRoute('/comments/index')?>">Comments</a>
                             </li>
                             <li><a class="fa fa-user" href="<?=toRoute('/contact/index')?>">Contact</a>
-                            </li>
-                            <li><a class="fa fa-user" href="<?=toRoute('/contact-translate/index')?>">Contact Translate</a>
                             </li>
                         </ul>
                     </li>

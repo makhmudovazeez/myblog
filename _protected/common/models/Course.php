@@ -16,6 +16,8 @@ use Yii;
 class Course extends \yii\db\ActiveRecord
 {
     public $photo;
+    public $title = [];
+    public $description = [];
     /**
      * @inheritdoc
      */
@@ -33,7 +35,7 @@ class Course extends \yii\db\ActiveRecord
             [['category_id', 'image'], 'required'],
             [['category_id'], 'integer'],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
-            [['image'], 'safe'],
+            [['image', 'title', 'description'], 'safe'],
             ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
 
         ];
@@ -87,13 +89,7 @@ class Course extends \yii\db\ActiveRecord
     {
      
         return CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language]) ? CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language])->description : "No Translation";
-    }
-    
-    public function getLangId(){
-        return $this->lang->name;
-    }
-
-    
+    }  
 
 
 }

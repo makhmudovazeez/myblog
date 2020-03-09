@@ -1,7 +1,9 @@
 <?php
 
+use common\models\ContactTranslate;
 use yii\helpers\Html;
-use yii\grid\GridView;
+use yii\widgets\ActiveForm;
+use mihaildev\ckeditor\CKEditor;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ContactSearch */
@@ -10,28 +12,51 @@ use yii\grid\GridView;
 $this->title = 'Contacts';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="contact-index">
+<div class="contact-Index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+<h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Create Contact', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+    <?php $form = ActiveForm::begin(); ?>
+    <div class="row">
+        <div class="col-md-6">
+            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'facebook')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'instagram')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'twitter')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'telegram')->textInput(['maxlength' => true]) ?>
+        </div>
+    </div>
+    <?php foreach (\common\models\Lang::find()->all() as $lg) : ?>
+    <?php if(!$model->isNewRecord) {
+                    $translate = ContactTranslate::findOne(['contact_id' => $model->id, 'lang_id' => $lg->id]);
+                    $model->address[$lg->id] = $translate ? $translate->address : "";
+                }
+            ?>
 
-            'email:email',
-            'phone',
-            'instagram',
-            'telegram',
-            'facebook',
-            'twitter',
+    <?= $form->field($model, "address[$lg->id]")->widget(CKEditor::className(),[
+                'editorOptions' => [
+                    'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
+                    'inline' => false, //по умолчанию false
+                ],
+            ])->label("Address ($lg->name)")?>
+    <?php endforeach; ?>
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+    <div class="form-group">
+        <?= Html::submitButton('Сохранить' , ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    </div>
+
+    <?php ActiveForm::end(); ?>
+
+
 </div>

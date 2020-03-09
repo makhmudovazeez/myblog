@@ -19,6 +19,7 @@ use Yii;
  */
 class Contact extends \yii\db\ActiveRecord
 {
+    public $address;
     /**
      * @inheritdoc
      */
@@ -34,6 +35,7 @@ class Contact extends \yii\db\ActiveRecord
     {
         return [
             [['email', 'phone'], 'required'],
+            [['address'], 'safe'],
             [['email', 'phone', 'facebook', 'instagram', 'twitter', 'telegram'], 'string', 'max' => 255],
         ];
     }

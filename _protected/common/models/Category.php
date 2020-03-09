@@ -18,6 +18,8 @@ use Yii;
 class Category extends \yii\db\ActiveRecord
 {
     public $photo;
+    public $title = [];
+    public $description = [];
     /**
      * @inheritdoc
      */
@@ -33,7 +35,7 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             [['image'], 'required'],
-            [['created_at', 'image'], 'safe'],
+            [['created_at', 'image', 'title', 'description'], 'safe'],
             ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
         ];
     }
@@ -67,6 +69,11 @@ class Category extends \yii\db\ActiveRecord
         return $this->hasMany(Course::className(), ['category_id' => 'id']);
     }
 
+    public function getTranslate()
+    {
+        $lang = Lang::findOne(['url' => Yii::$app->language])->id;
+        return $this->hasOne(CategoryTranslate::className(), ['category_id' => 'id'])->andWhere(['category_translate.lang_id' => $lang]);
+    }
 
     public function getLanguage(){
         return Lang::findOne(['url' => Yii::$app->language])->id;

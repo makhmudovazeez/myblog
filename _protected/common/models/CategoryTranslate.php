@@ -11,7 +11,7 @@ use Yii;
  * @property string $type
  * @property integer $category_id
  * @property integer $lang_id
- * @property integer $description
+ * @property string $description
  *
  * @property Category $category
  * @property Lang $lang
@@ -50,7 +50,7 @@ class CategoryTranslate extends \yii\db\ActiveRecord
             'type' => 'Type',
             'category_id' => 'Category ID',
             'lang_id' => 'Lang ID',
-            'description' => 'Description'
+            'description' => 'Description',
         ];
     }
 
@@ -68,10 +68,5 @@ class CategoryTranslate extends \yii\db\ActiveRecord
     public function getLang()
     {
         return $this->hasOne(Lang::className(), ['id' => 'lang_id']);
-    }
-
-    
-    public function getLangId(){
-        return $this->lang->name;
     }
 }

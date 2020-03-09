@@ -11,12 +11,14 @@ use Yii;
  * @property string $information
  * @property integer $course_info_id
  * @property integer $lang_id
+ * @property integer $image
  *
  * @property CourseInformation $courseInfo
  * @property Lang $lang
  */
 class CourseInfoTranslate extends \yii\db\ActiveRecord
 {
+    public $photo;
     /**
      * @inheritdoc
      */
@@ -33,7 +35,9 @@ class CourseInfoTranslate extends \yii\db\ActiveRecord
         return [
             [['information', 'course_info_id', 'lang_id'], 'required'],
             [['course_info_id', 'lang_id'], 'integer'],
-            [['information'], 'string', 'max' => 10000],
+            [['information'], 'string', 'max' => 21789],
+            [['image'], 'safe'],
+            ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
             [['course_info_id'], 'exist', 'skipOnError' => true, 'targetClass' => CourseInformation::className(), 'targetAttribute' => ['course_info_id' => 'id']],
             [['lang_id'], 'exist', 'skipOnError' => true, 'targetClass' => Lang::className(), 'targetAttribute' => ['lang_id' => 'id']],
         ];
@@ -49,6 +53,8 @@ class CourseInfoTranslate extends \yii\db\ActiveRecord
             'information' => 'Information',
             'course_info_id' => 'Course Info ID',
             'lang_id' => 'Lang ID',
+            'image' => 'Image',
+            'photo' => 'Photo',
         ];
     }
 

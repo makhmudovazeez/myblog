@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\Course;
+use common\models\CourseTranslate;
 use common\models\CourseSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -60,8 +61,15 @@ class CourseController extends BackendController
             $model->photo->saveAs("../uploads/course/" . $filename);
             $model->image=$filename;
             $model->photo = null;
-            
             $model->save();
+            foreach ($model->description as $lang => $info) {
+                $translate = new CourseTranslate(['course_id' => $model->id, 'lang_id' => $lang]);
+                $translate->description = $info;
+                if($model->title){
+                $translate->title = $model->title[$lang];
+                }
+                $translate->save();
+            }
             return $this->redirect(['index']);
         }
         return $this->render('create', [
@@ -77,12 +85,12 @@ class CourseController extends BackendController
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+        $model = $this->findOne($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         } else {
-            return $this->render('update', [
+            return $this->render('create', [
                 'model' => $model,
             ]);
         }

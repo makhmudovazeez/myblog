@@ -68,17 +68,5 @@ class ContactTranslate extends \yii\db\ActiveRecord
         return $this->hasOne(Contact::className(), ['id' => 'contact_id']);
     }
 
-    public function getLangId(){
-        return $this->lang->name;
-    }
-    
-    public function getEmail(){
-        return $this->contact->email;
-    }
-
-    public function getPhone(){
-        return $this->contact->phone;
-    }
-
 
 }
