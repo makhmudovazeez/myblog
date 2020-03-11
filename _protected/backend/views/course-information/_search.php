@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
 /* @var $this yii\web\View */
 /* @var $model common\models\CourseInformationSearch */
 /* @var $form yii\widgets\ActiveForm */
@@ -16,8 +15,6 @@ use yii\widgets\ActiveForm;
     ]); ?>
 
     <?= $form->field($model, 'id') ?>
-
-    <?= $form->field($model, 'image') ?>
 
     <?= $form->field($model, 'course_id') ?>
 

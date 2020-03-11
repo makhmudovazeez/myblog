@@ -4,10 +4,12 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\CourseInformation;
+use common\models\CourseInfoTranslate;
 use common\models\CourseInformationSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 
 /**
@@ -52,13 +54,24 @@ class CourseInformationController extends BackendController
     {
         $model = new CourseInformation();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+        var_dump($model); die;
+            $model->photo = UploadedFile::getInstance($model, 'photo');
+            $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
+            $model->photo->saveAs("../uploads/courseinfo/" . $filename);
+            $model->photo = null;
+            $model->save();
+            foreach ($model->information as $lang => $info) {
+                $translate = new CourseInfoTranslate(['course_info_id' => $model->id, 'lang_id' => $lang]);
+                $translate->information = $info;
+                $translate->image=$filename;
+                $translate->save();
+            }
             return $this->redirect(['index']);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
         }
+        return $this->render('create', [
+            'model' => $model,
+        ]);
     }
 
     /**

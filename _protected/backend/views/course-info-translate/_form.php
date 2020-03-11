@@ -1,8 +1,11 @@
 <?php
+
+use common\models\Lang;
 use mihaildev\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
+$lang = Lang::find()->all();
 /* @var $this yii\web\View */
 /* @var $model common\models\CourseInfoTranslate */
 /* @var $form yii\widgets\ActiveForm */
@@ -31,12 +34,16 @@ use yii\helpers\ArrayHelper;
         </div>
     </div>
 
+    <?php foreach($lang  as $lg): ?> 
+
     <?= $form->field($model, 'information')->widget(CKEditor::className(),[
         'editorOptions' => [
             'preset' => 'full',
             'inline' => false,
         ],
     ]); ?>
+
+    <?php endforeach; ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
