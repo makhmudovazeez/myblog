@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\News;
+use common\models\NewsTranslate;
 use common\models\NewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -53,15 +54,22 @@ class NewsController extends BackendController
     {
         $model = new News();
 
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post()) && $model->photo = UploadedFile::getInstance($model, 'photo')) {
         
             $model->photo = UploadedFile::getInstance($model, 'photo');
             $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
             $model->photo->saveAs("../uploads/news/" . $filename);
             $model->image=$filename;
             $model->photo = null;
-            
             $model->save();
+            foreach ($model->messageb as $lang => $info) {
+                $translate = new NewsTranslate(['news_id' => $model->id, 'lang_id' => $lang]);
+                $translate->messageb = $info;
+                if($model->titleb){
+                $translate->titleb = $model->titleb[$lang];
+                }
+                $translate->save();
+            }
             return $this->redirect(['index']);
         }
         return $this->render('create', [
@@ -78,8 +86,29 @@ class NewsController extends BackendController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        if ($model->load(Yii::$app->request->post())) {
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            if($model->photo = UploadedFile::getInstance($model, 'photo')){
+                $model->photo = UploadedFile::getInstance($model, 'photo');
+                $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
+                $model->photo->saveAs("../uploads/news/" . $filename);
+                $model->photo = null;
+                $model->image = $filename;
+            }
+            $model->save();
+            foreach ($model->messageb as $lang => $info) {
+                $translate = NewsTranslate::findOne(['news_id' => $model->id, 'lang_id' => $lang]);
+
+                if (!$translate) {
+                $translate = new NewsTranslate(['news_id' => $model->id, 'lang_id' => $lang]);
+                }
+
+                $translate->messageb = $info;
+                if($model->titleb){
+                    $translate->titleb = $model->titleb[$lang];
+                }
+                $translate->save();
+            }
             return $this->redirect(['index']);
         } else {
             return $this->render('update', [

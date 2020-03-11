@@ -39,34 +39,4 @@ class CategoryTranslate extends \yii\db\ActiveRecord
             [['lang_id'], 'exist', 'skipOnError' => true, 'targetClass' => Lang::className(), 'targetAttribute' => ['lang_id' => 'id']],
         ];
     }
-
-    /**
-     * @inheritdoc
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'type' => 'Type',
-            'category_id' => 'Category ID',
-            'lang_id' => 'Lang ID',
-            'description' => 'Description',
-        ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCategory()
-    {
-        return $this->hasOne(Category::className(), ['id' => 'category_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getLang()
-    {
-        return $this->hasOne(Lang::className(), ['id' => 'lang_id']);
-    }
 }

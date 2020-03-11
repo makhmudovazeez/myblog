@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use mihaildev\ckeditor\CKEditor;
+use common\models\CourseInfoTranslate;
 /* @var $this yii\web\View */
 /* @var $model common\models\CourseInformation */
 /* @var $form yii\widgets\ActiveForm */
@@ -11,16 +12,38 @@ use mihaildev\ckeditor\CKEditor;
 
 <div class="course-information-form">
 
-    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-        <li><a class="fa fa-arrow-right" href="<?=toRoute('/course-information/index')?>">Index</a>
-        </li>
-    </div>
-
     <?php $form = ActiveForm::begin(); ?>
-
+    <div class="row">
+        <div class="col-md-6">
+            <?= $form->field($model, 'course_id')->dropDownList(
+                ArrayHelper::map(common\models\Course::find()->all(), 'id', 'title'),
+                [
+                    'prompt' => 'Choose'
+                ]
+            ) ?>
+        </div>
+        <?php if(!$model->isNewRecord) {
+        $translate = CourseInfoTranslate::findOne(['course_info_id' => $model->id]);
+        $model->floatb = $translate ? $translate->float : "";
+        }
+    ?>
+        <div class="col-md-6">
+            <?= $form->field($model, 'floatb')->dropDownList(
+                $model->floats,
+                [
+                    'prompt' => 'Choose'
+                ]
+            )->label('Float') ?>
+        </div>
+    </div>
     <?= $form->field($model, 'photo')->fileInput()->label('Image') ?>
     <?php foreach (\common\models\Lang::find()->all() as $lg) : ?>
-    <?= $form->field($model, "information[$lg->id]")->widget(CKEditor::className(),[
+    <?php if(!$model->isNewRecord) {
+        $translate = CourseInfoTranslate::findOne(['course_info_id' => $model->id, 'lang_id' => $lg->id]);
+        $model->informationb[$lg->id] = $translate ? $translate->information : "";
+        }
+    ?>
+    <?= $form->field($model, "informationb[$lg->id]")->widget(CKEditor::className(),[
                     'editorOptions' => [
                         'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
                         'inline' => false, //по умолчанию false

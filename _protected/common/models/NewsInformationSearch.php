@@ -19,7 +19,6 @@ class NewsInformationSearch extends NewsInformation
     {
         return [
             [['id', 'news_id'], 'integer'],
-            [['image'], 'safe'],
         ];
     }
 
@@ -63,7 +62,6 @@ class NewsInformationSearch extends NewsInformation
             'news_id' => $this->news_id,
         ]);
 
-        $query->andFilterWhere(['like', 'image', $this->image]);
 
         return $dataProvider;
     }

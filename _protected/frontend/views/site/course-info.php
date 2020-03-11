@@ -12,14 +12,13 @@
     </div>
 </section>
 <!-- End banner Area -->
-
 <!-- Start popular-courses Area -->
 <section class="popular-courses-area section-gap courses-page">
     <div class="container">
         <?php foreach($model as $info): ?>
         <div class="thumb-wrap relative">
             <div class="thumb relative">
-                <img class="img-fluid" src="/uploads/courseinfoimg/<?= $info->image;?>" width="400" height="480"
+                <img class="img-fluid" src="/uploads/courseinfo/<?= $info->image;?>" width="400" height="480"
                     style="float: <?=$info->float?>; margin: 0 10px 7px 10px">
             </div>
         </div>

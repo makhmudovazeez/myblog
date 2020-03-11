@@ -26,7 +26,7 @@ class CategoryController extends BackendController
     {
         $searchModel = new CategorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        $model = Category::find()->one();
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -54,7 +54,7 @@ class CategoryController extends BackendController
     {
         $model = new Category();
 
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post()) && $model->photo = UploadedFile::getInstance($model, 'photo')) {
         
             $model->photo = UploadedFile::getInstance($model, 'photo');
             $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
@@ -63,11 +63,11 @@ class CategoryController extends BackendController
             $model->photo = null;
             $model->created_at = date('Y-m-d');
             $model->save();
-            foreach ($model->description as $lang => $info) {
+            foreach ($model->descriptionb as $lang => $info) {
                 $translate = new CategoryTranslate(['category_id' => $model->id, 'lang_id' => $lang]);
-                $translate->description = $info;
-                if($model->title){
-                $translate->type = $model->title[$lang];
+                $translate->descriptionb = $info;
+                if($model->typeb){
+                $translate->typeb = $model->typeb[$lang];
                 }
                 $translate->save();
             }
@@ -87,8 +87,30 @@ class CategoryController extends BackendController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        if ($model->load(Yii::$app->request->post())) {
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            if($model->photo = UploadedFile::getInstance($model, 'photo')){
+                $model->photo = UploadedFile::getInstance($model, 'photo');
+                $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
+                $model->photo->saveAs("../uploads/category/" . $filename);
+                $model->image=$filename;
+                $model->photo = null;
+            }
+            $model->created_at = date('Y-m-d');
+            $model->save();
+            foreach ($model->descriptionb as $lang => $info) {
+                $translate = CategoryTranslate::findOne(['category_id' => $model->id, 'lang_id' => $lang]);
+
+                if (!$translate) {
+                $translate = new CategoryTranslate(['category_id' => $model->id, 'lang_id' => $lang]);
+                }
+
+                $translate->description = $info;
+                if($model->typeb){
+                $translate->type = $model->typeb[$lang];
+                }
+                $translate->save();
+            }
             return $this->redirect(['index']);
         } else {
             return $this->render('update', [

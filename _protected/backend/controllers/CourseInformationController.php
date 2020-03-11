@@ -54,19 +54,20 @@ class CourseInformationController extends BackendController
     {
         $model = new CourseInformation();
 
-        if ($model->load(Yii::$app->request->post())) {
-        var_dump($model); die;
+        if ($model->load(Yii::$app->request->post()) && $model->photo = UploadedFile::getInstance($model, 'photo')) {
             $model->photo = UploadedFile::getInstance($model, 'photo');
             $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
             $model->photo->saveAs("../uploads/courseinfo/" . $filename);
             $model->photo = null;
             $model->save();
-            foreach ($model->information as $lang => $info) {
+            foreach ($model->informationb as $lang => $info) {
                 $translate = new CourseInfoTranslate(['course_info_id' => $model->id, 'lang_id' => $lang]);
                 $translate->information = $info;
                 $translate->image=$filename;
+                $translate->float = $model->floatb;
                 $translate->save();
             }
+            
             return $this->redirect(['index']);
         }
         return $this->render('create', [
@@ -83,8 +84,31 @@ class CourseInformationController extends BackendController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        if ($model->load(Yii::$app->request->post())) {
+            if($model->photo = UploadedFile::getInstance($model, 'photo')){
+                $model->photo = UploadedFile::getInstance($model, 'photo');
+                $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
+                $model->photo->saveAs("../uploads/courseinfo/" . $filename);
+                $model->photo = null;
+            }
+            
+            $model->save();
+            foreach ($model->informationb as $lang => $info) {
+                $translate = CourseInfoTranslate::findOne(['course_info_id' => $model->id, 'lang_id' => $lang]);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                if (!$translate) {
+                $translate = new CourseInfoTranslate(['course_info_id' => $model->id, 'lang_id' => $lang]);
+                }
+                
+                if($filename){
+                    $translate->image = $filename;
+                }
+
+                $translate->information = $info;
+                $translate->float = $model->floatb;
+                
+                $translate->save();
+            }
             return $this->redirect(['index']);
         } else {
             return $this->render('update', [

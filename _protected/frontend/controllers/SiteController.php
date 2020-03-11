@@ -124,12 +124,24 @@ class SiteController extends Controller
             ]);
 
     }
-    public function actionCategory()
+    public function actionNewsInfo($id, $type)
     {
-            $model = Category::find()->all();
-            return $this->render('category', [
+        if($type == 'news' && $id != null){
+            $model = NewsInformation::find()->where(['news_id' => $id])->all();
+            return $this->render('news-info', [
                 'model' => $model,
             ]);
+        }else{
+            return $this->render('news');
+        }
+
+    }
+    public function actionCategory()
+    {
+        $model = Category::find()->all();
+        return $this->render('category', [
+            'model' => $model,
+        ]);
 
     }
     public function actionCourses($id, $type)
@@ -139,8 +151,9 @@ class SiteController extends Controller
             return $this->render('courses', [
                 'model' => $model,
             ]);
+        }else{
+            return $this->render('category');
         }
-
     }
     public function actionCourseInfo($id, $type)
     {

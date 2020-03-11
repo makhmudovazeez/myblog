@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::img("../../../uploads/category/" . $photo->image, ['style' => 'width:150px']);
                 }
             ],
-            'created_at',
+
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

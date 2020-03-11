@@ -17,7 +17,6 @@ use yii\web\UploadedFile;
  */
 class CourseController extends BackendController
 {
-
     /**
      * Lists all Course models.
      * @return mixed
@@ -54,7 +53,7 @@ class CourseController extends BackendController
     {
         $model = new Course();
 
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post()) && $model->photo = UploadedFile::getInstance($model, 'photo')) {
         
             $model->photo = UploadedFile::getInstance($model, 'photo');
             $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
@@ -62,11 +61,11 @@ class CourseController extends BackendController
             $model->image=$filename;
             $model->photo = null;
             $model->save();
-            foreach ($model->description as $lang => $info) {
+            foreach ($model->descriptionb as $lang => $info) {
                 $translate = new CourseTranslate(['course_id' => $model->id, 'lang_id' => $lang]);
                 $translate->description = $info;
-                if($model->title){
-                $translate->title = $model->title[$lang];
+                if($model->titleb){
+                $translate->title = $model->titleb[$lang];
                 }
                 $translate->save();
             }
@@ -85,12 +84,33 @@ class CourseController extends BackendController
      */
     public function actionUpdate($id)
     {
-        $model = $this->findOne($id);
+        $model = $this->findModel($id);
+        if ($model->load(Yii::$app->request->post())) {
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            if($model->photo = UploadedFile::getInstance($model, 'photo')){
+                $model->photo = UploadedFile::getInstance($model, 'photo');
+                $filename = (-1)*((int)(microtime(true) * (1000))) . '.' . $model->photo->extension;
+                $model->photo->saveAs("../uploads/course/" . $filename);
+                $model->image=$filename;
+                $model->photo = null;
+            }
+            $model->save();
+            foreach ($model->descriptionb as $lang => $info) {
+                $translate = CourseTranslate::findOne(['course_id' => $model->id, 'lang_id' => $lang]);
+
+                if (!$translate) {
+                $translate = new CourseTranslate(['course_id' => $model->id, 'lang_id' => $lang]);
+                }
+
+                $translate->description = $info;
+                if($model->titleb){
+                $translate->title = $model->titleb[$lang];
+                }
+                $translate->save();
+            }
             return $this->redirect(['index']);
         } else {
-            return $this->render('create', [
+            return $this->render('update', [
                 'model' => $model,
             ]);
         }

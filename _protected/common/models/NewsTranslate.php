@@ -39,37 +39,4 @@ class NewsTranslate extends \yii\db\ActiveRecord
             [['news_id'], 'exist', 'skipOnError' => true, 'targetClass' => News::className(), 'targetAttribute' => ['news_id' => 'id']],
         ];
     }
-
-    /**
-     * @inheritdoc
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'message' => 'Message',
-            'news_id' => 'News ID',
-            'lang_id' => 'Lang ID',
-        ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getLang()
-    {
-        return $this->hasOne(Lang::className(), ['id' => 'lang_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getNews()
-    {
-        return $this->hasOne(News::className(), ['id' => 'news_id']);
-    }
-    public function getLangId(){
-        return $this->lang->name;
-    }
 }

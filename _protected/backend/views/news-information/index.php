@@ -32,11 +32,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
             ],
             [
-                'attribute' => 'image',
-                'format' => 'html',
-                'value' => function($photo){
-                    return Html::img("../../../uploads/newsinfo/" . $photo->image, ['style' => 'width:150px']);
-                }
+                'attribute' => 'news_id',
+                'label' => 'News ID',
+                'value' => function ($data) {
+                    return $data->title;
+                },
             ],
             ['class' => 'yii\grid\ActionColumn'],
         ],

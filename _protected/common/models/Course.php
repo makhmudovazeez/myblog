@@ -16,8 +16,8 @@ use Yii;
 class Course extends \yii\db\ActiveRecord
 {
     public $photo;
-    public $title = [];
-    public $description = [];
+    public $titleb = [];
+    public $descriptionb = [];
     /**
      * @inheritdoc
      */
@@ -35,7 +35,7 @@ class Course extends \yii\db\ActiveRecord
             [['category_id', 'image'], 'required'],
             [['category_id'], 'integer'],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
-            [['image', 'title', 'description'], 'safe'],
+            [['image', 'titleb', 'descriptionb'], 'safe'],
             ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
 
         ];
@@ -75,19 +75,16 @@ class Course extends \yii\db\ActiveRecord
 
     public function getType()
     {
-     
         return CategoryTranslate::findOne(['category_id' => $this->category_id, 'lang_id' => $this->language])->type;
     }
 
     public function getTitle()
     {
-     
-        return CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language]) ? CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language])->title : "No Translation";
+        return CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language]) ? CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language])->title : "No Translate";
     }
 
     public function getDescription()
     {
-     
         return CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language]) ? CourseTranslate::findOne(['course_id' => $this->id, 'lang_id' => $this->language])->description : "No Translation";
     }  
 

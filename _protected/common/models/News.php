@@ -16,6 +16,8 @@ use Yii;
 class News extends \yii\db\ActiveRecord
 {
     public $photo;
+    public $titleb;
+    public $messageb;
     /**
      * @inheritdoc
      */
@@ -32,6 +34,7 @@ class News extends \yii\db\ActiveRecord
         return [
             [['image'], 'required'],
             [['image'], 'string', 'max' => 255],
+            [['titleb', 'messageb'], 'safe'],
             ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
         ];
     }
@@ -70,7 +73,6 @@ class News extends \yii\db\ActiveRecord
 
     public function getTitle()
     {
-     
         return NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language]) ? NewsTranslate::findOne(['news_id' => $this->id, 'lang_id' => $this->language])->title : "No Translate";
     }
 

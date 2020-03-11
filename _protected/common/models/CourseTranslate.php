@@ -53,24 +53,4 @@ class CourseTranslate extends \yii\db\ActiveRecord
             'description' => 'Description',
         ];
     }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCourse()
-    {
-        return $this->hasOne(Course::className(), ['id' => 'course_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getLang()
-    {
-        return $this->hasOne(Lang::className(), ['id' => 'lang_id']);
-    }
-    
-    public function getLangId(){
-        return $this->lang->name;
-    }
 }

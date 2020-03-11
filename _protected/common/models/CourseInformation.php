@@ -15,8 +15,25 @@ use Yii;
  */
 class CourseInformation extends \yii\db\ActiveRecord
 {
-    public $information = [];
+    public $informationb = [];
     public $photo;
+    public $floatb;
+
+    const right = 'right';
+    const left = 'left';
+
+    public function getFloats($index=null){
+        $arr = [
+            self::right => 'right',
+            self::left => 'left',
+        ];
+
+        if($index){
+            return $arr[$index];
+        }
+
+        return $arr;
+    }
     /**
      * @inheritdoc
      */
@@ -33,7 +50,7 @@ class CourseInformation extends \yii\db\ActiveRecord
         return [
             [['course_id'], 'required'],
             [['course_id'], 'integer'],
-            [['information'], 'safe'],
+            [['informationb', 'floatb'], 'safe'],
             [['course_id'], 'exist', 'skipOnError' => true, 'targetClass' => Course::className(), 'targetAttribute' => ['course_id' => 'id']],
             ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
         ];
@@ -67,13 +84,26 @@ class CourseInformation extends \yii\db\ActiveRecord
         return $this->hasOne(Course::className(), ['id' => 'course_id']);
     }
 
-    public function getTitle()
-    {
-     
-        return CourseTranslate::findOne(['course_id' => $this->course_id, 'lang_id' => $this->language])->title;
-    }
-
     public function getLanguage(){
         return Lang::findOne(['url' => Yii::$app->language])->id;
     }
+
+    public function getTitle()
+    {
+        return CourseTranslate::findOne(['course_id' => $this->course_id, 'lang_id' => $this->language]) ? CourseTranslate::findOne(['course_id' => $this->course_id, 'lang_id' => $this->language])->title : "No Translate";
+    }
+    public function getImage()
+    {
+        return CourseInfoTranslate::findOne(['course_info_id' => $this->id])->image;
+    }
+
+    public function getFloat()
+    {
+        return CourseInfoTranslate::findOne(['course_info_id' => $this->id]) ? CourseInfoTranslate::findOne(['course_info_id' => $this->id])->float : "right";
+    }
+    public function getInfo()
+    {
+        return CourseInfoTranslate::findOne(['course_info_id' => $this->id, 'lang_id' => $this->language]) ? CourseInfoTranslate::findOne(['course_info_id' => $this->id, 'lang_id' => $this->language])->information : "No Translate";
+    }
+
 }

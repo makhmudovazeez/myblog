@@ -20,8 +20,14 @@ use mihaildev\ckeditor\CKEditor;
 
     <?= $form->field($model, 'photo')->fileInput()->label('Image') ?>
     <?php foreach (\common\models\Lang::find()->all() as $lg) : ?>
-    <?= $form->field($model, "title[$lg->id]")->textInput(['maxlength' => true])->label("Type ($lg->name)")?>
-    <?= $form->field($model, "description[$lg->id]")->widget(CKEditor::className(),[
+    <?php if(!$model->isNewRecord) {
+                    $translate = CategoryTranslate::findOne(['category_id' => $model->id, 'lang_id' => $lg->id]);
+                    $model->typeb[$lg->id] = $translate ? $translate->type : "";
+                    $model->descriptionb[$lg->id] = $translate ? $translate->description : "";
+                }
+    ?>
+    <?= $form->field($model, "typeb[$lg->id]")->textInput(['maxlength' => true])->label("Type ($lg->name)")?>
+    <?= $form->field($model, "descriptionb[$lg->id]")->widget(CKEditor::className(),[
                     'editorOptions' => [
                         'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
                         'inline' => false, //по умолчанию false

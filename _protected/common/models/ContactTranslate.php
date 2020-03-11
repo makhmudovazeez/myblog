@@ -52,21 +52,4 @@ class ContactTranslate extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getLang()
-    {
-        return $this->hasOne(Lang::className(), ['id' => 'lang_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getContact()
-    {
-        return $this->hasOne(Contact::className(), ['id' => 'contact_id']);
-    }
-
-
 }

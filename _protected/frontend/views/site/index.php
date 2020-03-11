@@ -1,5 +1,5 @@
 <?php
-use Yii\helpers\Url;
+use yii\helpers\Url;
 $this->title = Yii::t('app', "Home");
 ?>
 
@@ -96,7 +96,7 @@ $this->title = Yii::t('app', "Home");
                     </div>
                     <div class="detials col-12 col-md-6">
                         <p><?=$categ->created_at?></p>
-                        <a href="">
+                        <a href="<?=Url::to(['courses', 'id' => $categ->id, 'type' => "all"])?>">
                             <h4><?=$categ->type?></h4>
                         </a>
                         <p>
@@ -184,9 +184,7 @@ $this->title = Yii::t('app', "Home");
                 <?php foreach($comments as $comment): ?>
                 <div class="single-review item">
                     <div class="title justify-content-start d-flex">
-                        <a href="#">
                             <h4><?=$comment->last?> <?=$comment->first?></h4>
-                        </a>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -244,7 +242,7 @@ $this->title = Yii::t('app', "Home");
                 <div class="thumb">
                     <img class="/uploads/img-fluid" src="/uploads/news/<?=$new->image?>" alt="">
                 </div>
-                <a href="blog-single.html">
+                <a href="<?=Url::to(['news-info', 'id' => $new->id, 'type' => "news"])?>">
                     <h5><?=$new->title?></h5>
                 </a>
                 <p>

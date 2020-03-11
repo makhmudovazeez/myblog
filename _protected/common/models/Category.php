@@ -18,8 +18,8 @@ use Yii;
 class Category extends \yii\db\ActiveRecord
 {
     public $photo;
-    public $title = [];
-    public $description = [];
+    public $typeb = [];
+    public $descriptionb = [];
     /**
      * @inheritdoc
      */
@@ -35,7 +35,7 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             [['image'], 'required'],
-            [['created_at', 'image', 'title', 'description'], 'safe'],
+            [['created_at', 'image', 'typeb', 'descriptionb'], 'safe'],
             ['photo', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
         ];
     }
