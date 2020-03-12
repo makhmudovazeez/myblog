@@ -64,9 +64,9 @@ class NewsController extends BackendController
             $model->save();
             foreach ($model->messageb as $lang => $info) {
                 $translate = new NewsTranslate(['news_id' => $model->id, 'lang_id' => $lang]);
-                $translate->messageb = $info;
+                $translate->message = $info;
                 if($model->titleb){
-                $translate->titleb = $model->titleb[$lang];
+                $translate->title = $model->titleb[$lang];
                 }
                 $translate->save();
             }
@@ -103,9 +103,9 @@ class NewsController extends BackendController
                 $translate = new NewsTranslate(['news_id' => $model->id, 'lang_id' => $lang]);
                 }
 
-                $translate->messageb = $info;
+                $translate->message = $info;
                 if($model->titleb){
-                    $translate->titleb = $model->titleb[$lang];
+                    $translate->title = $model->titleb[$lang];
                 }
                 $translate->save();
             }

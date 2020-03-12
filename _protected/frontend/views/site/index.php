@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use yii\bootstrap\ActiveForm;
 $this->title = Yii::t('app', "Home");
 ?>
 
@@ -18,7 +19,6 @@ $this->title = Yii::t('app', "Home");
                     In the history of modern astronomy, there is probably no one greater leap forward than the building
                     and launch of the space telescope known as the Hubble.
                 </p>
-                <a href="#" class="primary-btn text-uppercase">Get Started</a>
             </div>
         </div>
     </div>
@@ -32,42 +32,42 @@ $this->title = Yii::t('app', "Home");
             <div class="col-lg-4">
                 <div class="single-feature">
                     <div class="title">
-                        <h4>Learn Online Courses</h4>
+                        <h4><?=t("Learn Online Courses")?></h4>
                     </div>
                     <div class="desc-wrap">
                         <p>
-                            Usage of the Internet is becoming more common due to rapid advancement
-                            of technology.
+                            <?=t("Usage of the Internet is becoming more common due to rapid advancement
+                            of technology.")?>
                         </p>
-                        <a href="#">Join Now</a>
+                        <a href="<?=Url::to(['category'])?>">Join Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="single-feature">
                     <div class="title">
-                        <h4>No.1 of universities</h4>
+                        <h4><?=t("News")?></h4>
                     </div>
                     <div class="desc-wrap">
                         <p>
-                            For many of us, our very first experience of learning about the celestial bodies begins when
-                            we saw our first.
+                            <?=t("For many of us, our very first experience of learning about the celestial bodies begins when
+                            we saw our first.")?>
                         </p>
-                        <a href="#">Join Now</a>
+                        <a href="<?=Url::to(['news'])?>"><?=t("Join Now")?></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="single-feature">
                     <div class="title">
-                        <h4>Huge Library</h4>
+                        <h4><?=t("About")?></h4>
                     </div>
                     <div class="desc-wrap">
                         <p>
-                            If you are a serious astronomy fanatic like a lot of us are, you can probably remember that
-                            one event.
+                            <?=t("If you are a serious astronomy fanatic like a lot of us are, you can probably remember that
+                            one event.")?>
                         </p>
-                        <a href="#">Join Now</a>
+                        <a href="<?=Url::to(['about'])?>"><?=t("Join Now")?></a>
                     </div>
                 </div>
             </div>
@@ -82,8 +82,8 @@ $this->title = Yii::t('app', "Home");
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">Types of Courses</h1>
-                    <p>If you are a serious astronomy fanatic like a lot of us</p>
+                    <h1 class="mb-10"><?=t("Types of Courses")?></h1>
+                    <p><?=t("If you are a serious astronomy fanatic like a lot of us")?></p>
                 </div>
             </div>
         </div>
@@ -118,57 +118,26 @@ $this->title = Yii::t('app', "Home");
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-6 col-md-6 search-course-left">
                 <h1 class="text-white">
-                    Get reduced fee <br>
-                    during this Summer!
+                    <?=t("Comments")?>
                 </h1>
-                <p>
-                    inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
-                    standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the
-                    job is beyond reproach.
-                </p>
                 <div class="row details-content">
                     <div class="col single-detials">
-                        <span class="lnr lnr-graduation-hat"></span>
-                        <a href="#">
-                            <h4>Expert Instructors</h4>
-                        </a>
-                        <p>
-                            Usage of the Internet is becoming more common due to rapid advancement of technology and
-                            power.
-                        </p>
-                    </div>
-                    <div class="col single-detials">
-                        <span class="lnr lnr-license"></span>
-                        <a href="#">
-                            <h4>Certification</h4>
-                        </a>
-                        <p>
-                            Usage of the Internet is becoming more common due to rapid advancement of technology and
-                            power.
-                        </p>
+                        <h4><?=t("If you want any feedback, you can write your opinion on the input field and send!")?>
+                        </h4>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 search-course-right section-gap">
-                <form class="form-wrap" action="#">
-                    <h4 class="text-white pb-20 text-center mb-30">Search for Available Course</h4>
-                    <input type="text" class="form-control" name="name" placeholder="Your Name"
-                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'">
-                    <input type="phone" class="form-control" name="phone" placeholder="Your Phone Number"
-                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email Address"
-                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'">
-                    <div class="form-select" id="service-select">
-                        <select>
-                            <option datd-display="">Choose Course</option>
-                            <option value="1">Course One</option>
-                            <option value="2">Course Two</option>
-                            <option value="3">Course Three</option>
-                            <option value="4">Course Four</option>
-                        </select>
-                    </div>
-                    <button class="primary-btn text-uppercase">Submit</button>
-                </form>
+                <?php $form = ActiveForm::begin(['options' => ['class' => 'form-wrap']]); ?>
+                <h4 class="text-white pb-20 text-center mb-30"><?=t("Leave your review")?></h4>
+                <?php if(Yii::$app->user->isGuest):?>
+                <?=$form->field($model, 'name')->textInput(["placeholder"=>"Your Name"])->label(false)?>
+                <?=$form->field($model, 'surname')->textInput(["placeholder"=>"Your Surname"])->label(false)?>
+                <?php endif; ?>
+                <?=$form->field($model, 'message')->textarea(["placeholder"=>"Your Comment", "rows"=>"4"])->label(false)?>
+
+                <button class="primary-btn text-uppercase">Send</button>
+                <?php ActiveForm::end(); ?>
             </div>
         </div>
     </div>
@@ -184,13 +153,17 @@ $this->title = Yii::t('app', "Home");
                 <?php foreach($comments as $comment): ?>
                 <div class="single-review item">
                     <div class="title justify-content-start d-flex">
-                            <h4><?=$comment->last?> <?=$comment->first?></h4>
+                        <?php if($comment->last && $comment->first): ?>
+                        <h4><?=$comment->last?> <?=$comment->first?></h4>
+                        <?php else :?>
+                        <h4><?=$comment->name?> <?=$comment->surname?></h4>
+                        <?php endif; ?>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
                         </div>
                     </div>
                     <p>
@@ -203,39 +176,17 @@ $this->title = Yii::t('app', "Home");
     </div>
 </section>
 <!-- End review Area -->
-
-
-<!-- Start cta-one Area -->
-<section class="cta-one-area relative section-gap">
-    <div class="container">
-        <div class="overlay overlay-bg"></div>
-        <div class="row justify-content-center">
-            <div class="wrap">
-                <h1 class="text-white">Become an instructor</h1>
-                <p>
-                    There is a moment in the life of any aspiring astronomer that it is time to buy that first
-                    telescope. It’s exciting to think about setting up your own viewing station whether that is on the
-                    deck.
-                </p>
-                <a class="primary-btn wh" href="#">Apply for the post</a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End cta-one Area -->
-
+<?php if($news):?>
 <!-- Start blog Area -->
 <section class="blog-area section-gap" id="blog">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">Latest posts from our Blog</h1>
-                    <p>In the history of modern astronomy there is.</p>
+                    <h1 class="mb-10"><?=t("The Lastest News I`ve posted")?></h1>
                 </div>
             </div>
         </div>
-        <?php if($news):?>
         <div class="row">
             <?php foreach($news as $new): ?>
             <div class="col-lg-3 col-md-6 single-blog">
@@ -248,12 +199,14 @@ $this->title = Yii::t('app', "Home");
                 <p>
                     <?=$new->message?>
                 </p>
-                <a href="<?//Yii\helpers\Url::to(['news'])?>" class="details-btn d-flex justify-content-center align-items-center"><span
+                <a href="<?//Yii\helpers\Url::to(['news'])?>"
+                    class="details-btn d-flex justify-content-center align-items-center"><span
                         class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>
             </div>
             <?php endforeach; ?>
         </div>
-        <?php endif;?>
     </div>
 </section>
+<?php endif;?>
+
 <!-- End blog Area -->

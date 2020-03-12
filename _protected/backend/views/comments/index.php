@@ -31,6 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->username;
                 },
             ],
+            'name',
+            'surname',
             'message',
 
             ['class' => 'yii\grid\ActionColumn'],

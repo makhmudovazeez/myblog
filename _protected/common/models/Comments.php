@@ -10,6 +10,8 @@ use Yii;
  * @property integer $id
  * @property integer $user_profile_id
  * @property string $message
+ * @property string $name
+ * @property string $surname
  *
  * @property UserProfile $userProfile
  */
@@ -29,9 +31,9 @@ class Comments extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_profile_id', 'message'], 'required'],
+            [['message'], 'required'],
             [['user_profile_id'], 'integer'],
-            [['message'], 'string', 'max' => 255],
+            [['message', 'name', 'surname'], 'string', 'max' => 255],
             [['user_profile_id'], 'exist', 'skipOnError' => true, 'targetClass' => UserProfile::className(), 'targetAttribute' => ['user_profile_id' => 'id']],
         ];
     }
@@ -45,6 +47,8 @@ class Comments extends \yii\db\ActiveRecord
             'id' => 'ID',
             'user_profile_id' => 'User Profile ID',
             'message' => 'Message',
+            'name' => 'Name',
+            'surname' => 'Surname'
         ];
     }
 

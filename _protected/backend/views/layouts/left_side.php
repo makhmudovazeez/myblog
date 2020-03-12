@@ -64,6 +64,8 @@
                     </li>
                     <li><a class="fa fa-picture-o" href="<?=toRoute('/gallery/index')?>">Gallery</a>
                     </li>
+                    <li><a class="fa fa-info" href="<?=toRoute('/about/index')?>">About</a>
+                    </li>
                     <li><a class="fa fa-globe" href="<?=toRoute('/lang/index')?>">Languages</a>
                     </li>
                 </ul>

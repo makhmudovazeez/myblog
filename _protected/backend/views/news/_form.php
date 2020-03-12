@@ -24,8 +24,8 @@ use common\models\NewsTranslate;
         $model->message[$lg->id] = $translate ? $translate->message : "";
         }
     ?>
-    <?= $form->field($model, "title[$lg->id]")->textInput(['maxlength' => true])->label("Title ($lg->name)")?>
-    <?= $form->field($model, "message[$lg->id]")->widget(CKEditor::className(),[
+    <?= $form->field($model, "titleb[$lg->id]")->textInput(['maxlength' => true])->label("Title ($lg->name)")?>
+    <?= $form->field($model, "messageb[$lg->id]")->widget(CKEditor::className(),[
                 'editorOptions' => [
                     'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
                     'inline' => false, //по умолчанию false

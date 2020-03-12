@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Url;
-
+$this->title = Yii::t('app', 'News');
 ?>
 <!-- start banner Area -->
 <section class="banner-area relative about-banner" id="home">
@@ -23,8 +23,7 @@ use yii\helpers\Url;
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">Popular Courses we offer</h1>
-                    <p>There is a moment in the life of any aspiring.</p>
+                    <h1 class="mb-10"><?=t("The Lastest News I`ve posted")?></h1>
                 </div>
             </div>
         </div>

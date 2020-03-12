@@ -14,13 +14,19 @@ use yii\helpers\ArrayHelper;
     <?php $form = ActiveForm::begin(); ?>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <?= $form->field($model, 'user_profile_id')->dropDownList(
                 ArrayHelper::map(common\models\UserProfile::find()->all(), 'id', 'username'),
                 [
                     'prompt' => 'Choose'
                 ]
             ) ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'surname')->textInput(['maxlength' => true]) ?>
         </div>
     </div>
     <?= $form->field($model, 'message')->widget(CKEditor::className(),[

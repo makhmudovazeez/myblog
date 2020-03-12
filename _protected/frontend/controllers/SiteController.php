@@ -4,10 +4,12 @@ namespace frontend\controllers;
 use common\models\LoginForm;
 use common\models\User;
 use common\models\Category;
+use common\models\About;
 use common\models\News;
 use common\models\NewsInformation;
 use common\models\Course;
 use common\models\Contact;
+use common\models\UserProfile;
 use common\models\Comments;
 use common\models\Gallery;
 use common\models\CourseInformation;
@@ -97,6 +99,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $model = new Comments;
+        if($model->load(Yii::$app->request->post())){
+            if(!($model->name && $model->surname)){
+                $user = UserProfile::findOne(['user_id' => Yii::$app->user->id]);
+                $model->user_profile_id = $user->id;
+            }
+            $model->save();
+            $model = new Comments;
+        }
         $category = Category::find()->all();
         $news = News::find()->orderBy(['id' => SORT_DESC])->all();
         $comments = Comments::find()->all();
@@ -104,6 +115,7 @@ class SiteController extends Controller
             'news' => $news,
             'category' => $category,
             'comments' => $comments,
+            'model' => $model,
         ]);
     }
 
@@ -118,7 +130,7 @@ class SiteController extends Controller
 
     public function actionNews()
     {
-            $model = News::find()->all();
+            $model = News::find()->orderBy(['id' => SORT_DESC])->all();
             return $this->render('news', [
                 'model' => $model,
             ]);
@@ -173,7 +185,10 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+        $model = About::find()->one();
+        return $this->render('about', [
+            'model' => $model,
+        ]);
     }
 
     /**

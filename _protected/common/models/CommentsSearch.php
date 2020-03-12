@@ -19,7 +19,7 @@ class CommentsSearch extends Comments
     {
         return [
             [['id', 'user_profile_id'], 'integer'],
-            [['message'], 'safe'],
+            [['message', 'name', 'surname'], 'safe'],
         ];
     }
 
@@ -61,6 +61,8 @@ class CommentsSearch extends Comments
         $query->andFilterWhere([
             'id' => $this->id,
             'user_profile_id' => $this->user_profile_id,
+            'name' => $this->name,
+            'surname' => $this->surname,
         ]);
 
         $query->andFilterWhere(['like', 'message', $this->message]);
