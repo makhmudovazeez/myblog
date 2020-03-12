@@ -14,8 +14,8 @@
 <!-- End banner Area -->
 <!-- Start popular-courses Area -->
 <section class="popular-courses-area section-gap courses-page">
+    <?php foreach($model as $info): ?>
     <div class="container">
-        <?php foreach($model as $info): ?>
         <div class="thumb-wrap relative">
             <div class="thumb relative">
                 <img class="img-fluid" src="/uploads/courseinfo/<?= $info->image;?>" width="400" height="480"
@@ -25,8 +25,11 @@
         <p>
             <?=$info->info?>
         </p>
-        <?php endforeach;?>
     </div>
     </div>
+    <?php endforeach;?>
+
 </section>
+
 <!-- End popular-courses Area -->
+<!-- style="margin-bottom: 70px" -->

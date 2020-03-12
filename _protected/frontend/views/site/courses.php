@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\Url;
 
 ?>
 <!-- start banner Area -->
@@ -38,7 +39,7 @@
                     </div>
                 </div>
                 <div class="details">
-                    <a href="course-details.html">
+                    <a href="<?=Url::to(['course-info', 'id' => $course->id, 'type' => 'courses'])?>">
                         <h4>
                             <?= $course->title?>
                         </h4>

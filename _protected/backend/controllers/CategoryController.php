@@ -65,9 +65,9 @@ class CategoryController extends BackendController
             $model->save();
             foreach ($model->descriptionb as $lang => $info) {
                 $translate = new CategoryTranslate(['category_id' => $model->id, 'lang_id' => $lang]);
-                $translate->descriptionb = $info;
+                $translate->description = $info;
                 if($model->typeb){
-                $translate->typeb = $model->typeb[$lang];
+                $translate->type = $model->typeb[$lang];
                 }
                 $translate->save();
             }
