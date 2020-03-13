@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    REGISTRATION
+                    <?=t("Registration")?>
                 </h1>
             </div>
         </div>
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container">
         <div class="fixer"></div>
         <div class="login-content mt-0 mb-0">
-            <h2 class="text-header mt-0 mb-3 text-center">REGISTRATION</h2>
+            <h2 class="text-header mt-0 mb-3 text-center"><?=t("Registration")?></h2>
             <?php $form =  \yii\bootstrap\ActiveForm::begin([
                 'action' => toRoute('/site/signup'),
                 'method' => 'POST',
@@ -44,27 +44,27 @@ $this->params['breadcrumbs'][] = $this->title;
             ])?>
 
             <?= $form->field($model, 'first')->input('text', [
-                'placeholder' => 'First name *'
+                'placeholder' => t('First name *')
             ])->label(false)?>
 
             <?= $form->field($model, 'last')->input('text', [
-                'placeholder' => 'Last name *'
+                'placeholder' => t('Last name *')
             ])->label(false)?>
 
             <?= $form->field($model, 'username')->input('text', [
-                'placeholder' => 'Username *'
+                'placeholder' => t('Username *')
             ])->label(false)?>
 
             <?= $form->field($model, 'email')->input('email', [
-                'placeholder' => 'Email Address *'
+                'placeholder' => t('Email Address *')
             ])->label(false)?>
 
             <?= $form->field($model, 'password')->input('password', [
-                'placeholder' => 'Password *'
+                'placeholder' => t('Password *')
             ])->label(false)?>
 
             <?= $form->field($model, 'confirm_password')->input('password', [
-                'placeholder' => 'Confirm password *'
+                'placeholder' => t('Confirm password *')
             ])->label(false)?>
 
             <?= $form->field($model, 'file', [
@@ -91,9 +91,9 @@ $this->params['breadcrumbs'][] = $this->title;
             ])->input('checkbox', [
                 'class' => 'custom-control-input'
             ])->label(false)?>
-            <span class="w-100 text-center text-description">Do you have an account? <a class="text-danger"
-                    href="<?=toRoute('/site/login')?>">Log in</a></span>
-            <?=\yii\helpers\Html::submitButton('SIGN UP');?>
+            <span class="w-100 text-center text-description"><?=t("Do you have an account?")?><a class="text-danger"
+                    href="<?=toRoute('/site/login')?>"><?=t("Login")?></a></span>
+            <?=\yii\helpers\Html::submitButton(t('Sign up'));?>
 
             <?php \yii\bootstrap\ActiveForm::end();?>
 
@@ -102,12 +102,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <a href="#" class="btn btn-facebook w-100">
                     <i class="fa fa-facebook"></i>
-                    sign in with facebook
+                    <?=t("sign in with facebook")?>
                 </a>
 
                 <a href="#" class="btn btn-google w-100">
                     <i class="fa fa-google"></i>
-                    sign in with google
+                    <?=t("sign in with google")?>
                 </a>
 
             </div>

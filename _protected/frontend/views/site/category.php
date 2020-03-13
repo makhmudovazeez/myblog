@@ -8,7 +8,7 @@
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    Category
+                    <?=t("Categories")?>
                 </h1>
             </div>
         </div>
@@ -22,8 +22,7 @@
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10">Popular Courses we offer</h1>
-                    <p>There is a moment in the life of any aspiring.</p>
+                    <h1 class="mb-10"><?=t("All possible course categories")?></h1>
                 </div>
             </div>
         </div>
@@ -50,7 +49,6 @@
             </div>
         <?php endif; endforeach;?>
         </div>
-        <a href="#" class="primary-btn text-uppercase mx-auto">Load More Courses</a>
     </div>
     </div>
 </section>

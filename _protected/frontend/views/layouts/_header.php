@@ -13,6 +13,7 @@ $course = Course::find()->all();
             <div class="row">
                 <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
                     <ul>
+                    <?= \frontend\widgets\Wlang::widget()?>
                         <?php if($contact->facebook): ?>
                         <li><a href="<?=$contact->facebook?>"><i class="fa fa-facebook"></i></a></li>
                         <?php endif;?>
@@ -43,11 +44,11 @@ $course = Course::find()->all();
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="<?=Url::to(['index'])?>">HOME</a></li>
-                    <li><a href="<?=Url::to(['about'])?>">ABOUT</a></li>
-                    <li><a href="<?=Url::to(['news'])?>">NEWS</a></li>
-                    <li><a href="<?=Url::to(['gallery'])?>">GALLERY</a></li>
-                    <li class="menu-has-children"><a href="<?=Url::to(['category'])?>">COURSES</a>
+                    <li><a href="<?=Url::to(['index'])?>"><?=t("Home")?></a></li>
+                    <li><a href="<?=Url::to(['about'])?>"><?=t("About")?></a></li>
+                    <li><a href="<?=Url::to(['news'])?>"><?=t("News")?></a></li>
+                    <li><a href="<?=Url::to(['gallery'])?>"><?=t("Gallery")?></a></li>
+                    <li class="menu-has-children"><a href="<?=Url::to(['category'])?>"><?=t("Courses")?></a>
                         <ul>
                             <?php foreach($category as $ct): ?>
                             <?php if($ct->type && $ct->type != 'No Translate'): ?>
@@ -66,11 +67,11 @@ $course = Course::find()->all();
                             <?php endif; endforeach; ?>
                         </ul>
                     </li>
-                    <li><a href="<?=Url::to(['feedback'])?>">FEEDBACK</a></li>
+                    <li><a href="<?=Url::to(['feedback'])?>"><?=t("Feedback")?></a></li>
                     <?php if(Yii::$app->user->isGuest): ?>
-                    <li><a href="<?=Url::to(['login'])?>">LOGIN</a></li>
+                    <li><a href="<?=Url::to(['login'])?>"><?=t("Login")?></a></li>
                     <?php else: ?>
-                    <li><a href="<?=Url::to(['logout'])?>" data-method="post">logout</a></li>
+                    <li><a href="<?=Url::to(['logout'])?>" data-method="post"><?=t("Logout")?></a></li>
                     <?php endif; ?>
                 </ul>
             </nav><!-- #nav-menu-container -->

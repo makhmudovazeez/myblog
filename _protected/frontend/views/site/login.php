@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    LOGIN
+                    <?=t("Login")?>
                 </h1>
             </div>
         </div>
@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="fixer"></div>
     <div class="container pb-5">
         <div class="login-content mt-5 mb-0">
-            <h2 class="text-header mt-0 mb-3 text-center">LOGIN</h2>
+            <h2 class="text-header mt-0 mb-3 text-center"><?=t("Login")?></h2>
 
             <?php $form =  \yii\bootstrap\ActiveForm::begin([
                 'action' => toRoute('/site/login'),
@@ -35,11 +35,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ])?>
 
             <?= $form->field($model, 'username')->input('text', [
-                'placeholder' => 'Username or email *'
+                'placeholder' => t('Username or email *')
             ])->label(false)?>
 
             <?= $form->field($model, 'password')->input('password', [
-                'placeholder' => 'Password *'
+                'placeholder' => t('Password *')
             ])->label(false)?>
 
             <?= $form->field($model, 'rememberMe', [
@@ -55,23 +55,23 @@ $this->params['breadcrumbs'][] = $this->title;
                 'placeholder' => 'Password *',
                 'class' => 'custom-control-input'
             ])->label(false)?>
-            <div class="w-100 text-center text-description">Don`t have an account? <a class="text-danger" href="<?=toRoute('/site/signup')?>">Registration</a></div>
+            <div class="w-100 text-center text-description"><?=t("Don`t have an account?")?> <a class="text-danger" href="<?=toRoute('/site/signup')?>"><?=t("Registration")?></a></div>
 
             <?=\yii\helpers\Html::submitButton('LOGIN');?>
 
             <?php \yii\bootstrap\ActiveForm::end();?>
 
             <div class="w-100 login-inner text-center pt-4">
-                <span>OR</span>
+                <span><?=t("OR")?></span>
 
                 <a href="#" class="btn btn-facebook w-100">
                     <i class="fa fa-facebook"></i>
-                    Login with Facebook
+                    <?=t("Login with Facebook")?>
                 </a>
 
                 <a href="#" class="btn btn-google w-100">
                     <i class="fa fa-google"></i>
-                    Login with Google
+                    <?=t("Login with Google")?>
                 </a>
 
             </div>

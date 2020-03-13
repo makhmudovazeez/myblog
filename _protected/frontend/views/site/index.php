@@ -4,7 +4,6 @@ use yii\bootstrap\ActiveForm;
 $this->title = Yii::t('app', "Home");
 ?>
 
-
 <!-- start banner Area -->
 <section class="banner-area relative" id="home">
     <div class="overlay overlay-bg"></div>
@@ -12,13 +11,11 @@ $this->title = Yii::t('app', "Home");
         <div class="row fullscreen d-flex align-items-center justify-content-between">
             <div class="banner-content col-lg-9 col-md-12">
                 <h1 class="text-uppercase">
-                    We Ensure better education
-                    for a better world
+                    <?=t("We are professionals")?>
                 </h1>
-                <p class="pt-10 pb-10">
-                    In the history of modern astronomy, there is probably no one greater leap forward than the building
-                    and launch of the space telescope known as the Hubble.
-                </p>
+                <h3 class="text-uppercase">
+                    <?=t("We will teach you what we learned myself")?>
+                </h3>
             </div>
         </div>
     </div>
@@ -32,14 +29,13 @@ $this->title = Yii::t('app', "Home");
             <div class="col-lg-4">
                 <div class="single-feature">
                     <div class="title">
-                        <h4><?=t("Learn Online Courses")?></h4>
+                        <h4><?=t("Learn Courses Online")?></h4>
                     </div>
                     <div class="desc-wrap">
                         <p>
-                            <?=t("Usage of the Internet is becoming more common due to rapid advancement
-                            of technology.")?>
+                            <?=t("Here are the courses that we learned and share with you")?>
                         </p>
-                        <a href="<?=Url::to(['category'])?>">Join Now</a>
+                        <a href="<?=Url::to(['category'])?>"><?=t("Join Now")?></a>
                     </div>
                 </div>
             </div>
@@ -50,8 +46,7 @@ $this->title = Yii::t('app', "Home");
                     </div>
                     <div class="desc-wrap">
                         <p>
-                            <?=t("For many of us, our very first experience of learning about the celestial bodies begins when
-                            we saw our first.")?>
+                            <?=t("Here are interesting and latest news")?>
                         </p>
                         <a href="<?=Url::to(['news'])?>"><?=t("Join Now")?></a>
                     </div>
@@ -64,8 +59,7 @@ $this->title = Yii::t('app', "Home");
                     </div>
                     <div class="desc-wrap">
                         <p>
-                            <?=t("If you are a serious astronomy fanatic like a lot of us are, you can probably remember that
-                            one event.")?>
+                            <?=t("All possible information about us")?>
                         </p>
                         <a href="<?=Url::to(['about'])?>"><?=t("Join Now")?></a>
                     </div>
@@ -77,13 +71,14 @@ $this->title = Yii::t('app', "Home");
 <!-- End feature Area -->
 
 <!-- Start upcoming-event Area -->
+<?php if($category):?>
 <section class="upcoming-event-area section-gap">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
                     <h1 class="mb-10"><?=t("Types of Courses")?></h1>
-                    <p><?=t("If you are a serious astronomy fanatic like a lot of us")?></p>
+                    <p><?=t("All possible course categories")?></p>
                 </div>
             </div>
         </div>
@@ -109,6 +104,7 @@ $this->title = Yii::t('app', "Home");
         </div>
     </div>
 </section>
+<?php endif; ?>
 <!-- End upcoming-event Area -->
 
 <!-- Start search-course Area -->
@@ -131,10 +127,10 @@ $this->title = Yii::t('app', "Home");
                 <?php $form = ActiveForm::begin(['options' => ['class' => 'form-wrap']]); ?>
                 <h4 class="text-white pb-20 text-center mb-30"><?=t("Leave your review")?></h4>
                 <?php if(Yii::$app->user->isGuest):?>
-                <?=$form->field($model, 'name')->textInput(["placeholder"=>"Your Name"])->label(false)?>
-                <?=$form->field($model, 'surname')->textInput(["placeholder"=>"Your Surname"])->label(false)?>
+                <?=$form->field($model, 'name')->textInput(["placeholder"=>t("Your Name")])->label(false)?>
+                <?=$form->field($model, 'surname')->textInput(["placeholder"=>t("Your Surname")])->label(false)?>
                 <?php endif; ?>
-                <?=$form->field($model, 'message')->textarea(["placeholder"=>"Your Comment", "rows"=>"4"])->label(false)?>
+                <?=$form->field($model, 'message')->textarea(["placeholder"=>t("Your Comment"), "rows"=>"4"])->label(false)?>
 
                 <button class="primary-btn text-uppercase">Send</button>
                 <?php ActiveForm::end(); ?>
@@ -145,9 +141,17 @@ $this->title = Yii::t('app', "Home");
 <!-- End search-course Area -->
 
 <!-- Start review Area -->
+<?php if($comments):?>
 <section class="review-area section-gap relative">
     <div class="overlay overlay-bg"></div>
     <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-70 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10"><?=t("Comments Left By Users")?></h1>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="active-review-carusel">
                 <?php foreach($comments as $comment): ?>
@@ -175,15 +179,17 @@ $this->title = Yii::t('app', "Home");
         </div>
     </div>
 </section>
+<?php endif; ?>
 <!-- End review Area -->
-<?php if($news):?>
+
 <!-- Start blog Area -->
+<?php if($news):?>
 <section class="blog-area section-gap" id="blog">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
-                    <h1 class="mb-10"><?=t("The Lastest News I`ve posted")?></h1>
+                    <h1 class="mb-10"><?=t("The Lastest News We posted")?></h1>
                 </div>
             </div>
         </div>
@@ -193,13 +199,11 @@ $this->title = Yii::t('app', "Home");
                 <div class="thumb">
                     <img class="/uploads/img-fluid" src="/uploads/news/<?=$new->image?>" alt="">
                 </div>
-                <a href="<?=Url::to(['news-info', 'id' => $new->id, 'type' => "news"])?>">
-                    <h5><?=$new->title?></h5>
-                </a>
+                <h5><?=$new->title?></h5>
                 <p>
                     <?=$new->message?>
                 </p>
-                <a href="<?//Yii\helpers\Url::to(['news'])?>"
+                <a href="<?=Url::to(['news-info', 'id' => $new->id, 'type' => "news"])?>"
                     class="details-btn d-flex justify-content-center align-items-center"><span
                         class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>
             </div>
