@@ -98,7 +98,7 @@ class User extends UserIdentity
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
             'item_name' => Yii::t('app', 'Role'),
-            'image' => Yii::t('app', 'Image')
+            'image' => Yii::t('app', 'Image'),
         ];
     }
 

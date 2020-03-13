@@ -67,18 +67,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'placeholder' => t('Confirm password *')
             ])->label(false)?>
 
-            <?= $form->field($model, 'file', [
-                'template' => '
-                    <label class="custom-file w-100">
-                      {input}
-                      <span class="custom-file-control form-control-file"></span>
-                      <span class="">{error}</span>
-                    </label>
-                '
-            ])->fileInput([
-                'class' => 'border-0 custom-file-input'
-            ])->label(false);?>
-
             <?= $form->field($model, 'agreement', [
                 'template' => '
                     <label class="custom-control custom-radio pt-3">
